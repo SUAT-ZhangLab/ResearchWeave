@@ -37,5 +37,4 @@ for item in f["prompts"]:
     assert digest(prompt.encode())==item["string_sha256"],item["name"]
 checks.append({"system":"Finch","prompt_bodies_verified":len(f["prompts"])})
 print(json.dumps(checks,ensure_ascii=False,indent=2))
-(BASE/"extraction-check.json").write_text(json.dumps(checks,ensure_ascii=False,indent=2),encoding="utf-8")
 

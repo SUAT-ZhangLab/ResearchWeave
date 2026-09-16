@@ -627,8 +627,8 @@
     },
     {
       "path": "verify_extractions.py",
-      "bytes": 2476,
-      "sha256": "42028faa6c7df2e3d942db471ad734fe20d0128b5337750f82a1caa5d446b080"
+      "bytes": 2368,
+      "sha256": "a846c02224f2218dbf6a42fce11884932933d98c3b9f7a76e8d60a0b3579822d"
     }
   ]
 }
