@@ -112,8 +112,8 @@
     },
     {
       "path": "era/extract.py",
-      "bytes": 5984,
-      "sha256": "7a67587a39d46b9140ebe358261ad2e44f4496c7196f1b736ada27f99db763ef"
+      "bytes": 5989,
+      "sha256": "b75ae7a9883a04ab7824d99f1145fcdcbb031bea145b7a5bc8a5d68f71fe0ebf"
     },
     {
       "path": "era/manifest.json",
