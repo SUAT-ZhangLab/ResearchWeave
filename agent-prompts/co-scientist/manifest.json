@@ -1,0 +1,176 @@
+{
+  "title": "Co-Scientist published prompt extraction",
+  "retrieved_on": "2026-09-15",
+  "citation": "Gottweis, J., Weng, W.-H., Daryin, A. et al. Accelerating scientific discovery with Co-Scientist. Nature 655, 487–496 (2026). https://doi.org/10.1038/s41586-026-10644-y",
+  "article_url": "https://www.nature.com/articles/s41586-026-10644-y",
+  "pdf_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-026-10644-y/MediaObjects/41586_2026_10644_MOESM1_ESM.pdf",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": "Article Rights and permissions states Creative Commons Attribution 4.0; no separate restrictive credit line identified in Notes 8–9.",
+  "pdf_sha256": "e5595509a10da6e4d24c7df399d0f60e922d628cf1647df3880f8b0ba1c93fbc",
+  "pdf_pages": 120,
+  "extraction": {
+    "package": "pypdf",
+    "version": "6.18.1",
+    "mode": "layout",
+    "changes": [
+      "PDF to UTF-8 text",
+      "page labels added to complete-note copies",
+      "prompt-box None labels and page breaks omitted only from per-template copies",
+      "common margin indentation removed per extracted page segment"
+    ],
+    "limits": [
+      "PDF text extraction can alter line wrapping and reading order; use the saved PDF as the authoritative source.",
+      "Printed syntax inconsistencies are retained.",
+      "Published research templates are not proof of the complete current hosted-service instructions."
+    ]
+  },
+  "templates": [
+    {
+      "file": "original/01-generation-literature-review.md",
+      "title": "Generation: hypothesis generation after literature review",
+      "note": "9.1",
+      "pdf_pages": [
+        62,
+        62
+      ],
+      "placeholders": [
+        "articles_with_reasoning",
+        "goal",
+        "instructions",
+        "preferences",
+        "source_hypothesis"
+      ],
+      "prompt_sha256": "701facc2d5413ea5ed087cec88928cd3ac2ab7fc0b094be71afd0517bbbc0fd1",
+      "prompt_characters": 831
+    },
+    {
+      "file": "original/02-generation-scientific-debate.md",
+      "title": "Generation: hypothesis generation after scientific debate",
+      "note": "9.1",
+      "pdf_pages": [
+        63,
+        64
+      ],
+      "placeholders": [
+        "goal",
+        "idea_attributes",
+        "instructions",
+        "preferences",
+        "reviews_overview",
+        "transcript"
+      ],
+      "prompt_sha256": "c676609083ef2f6ceed00a40257dee2fe1b3a17f2d09c0030d5f25ae8b847266",
+      "prompt_characters": 1720
+    },
+    {
+      "file": "original/03-reflection-observations.md",
+      "title": "Reflection: observations explained or contradicted by a hypothesis",
+      "note": "9.2",
+      "pdf_pages": [
+        64,
+        65
+      ],
+      "placeholders": [
+        "article",
+        "hypothesis"
+      ],
+      "prompt_sha256": "36c28eb11e6421d7ed589077e29c977c7591b016077989068c47e415cac9b920",
+      "prompt_characters": 1917
+    },
+    {
+      "file": "original/04-ranking-comparison.md",
+      "title": "Ranking: hypothesis comparison during tournament",
+      "note": "9.3",
+      "pdf_pages": [
+        65,
+        66
+      ],
+      "placeholders": [
+        "goal",
+        "hypothesis 1",
+        "hypothesis 2",
+        "idea_attributes",
+        "notes",
+        "preferences",
+        "review 1",
+        "review 2"
+      ],
+      "prompt_sha256": "b41182a5a50e4fc5d6e8656ac885851464dd35647c256ccefe817acf870cf67a",
+      "prompt_characters": 788
+    },
+    {
+      "file": "original/05-ranking-scientific-debate.md",
+      "title": "Ranking: hypothesis comparison via simulated scientific debate",
+      "note": "9.3",
+      "pdf_pages": [
+        66,
+        67
+      ],
+      "placeholders": [
+        "goal",
+        "hypothesis 1",
+        "hypothesis 2",
+        "notes",
+        "preferences",
+        "review 2",
+        "review1"
+      ],
+      "prompt_sha256": "e072791686c229a4720fe91de08dc33f7431be61c3da71b8dfd690bbf3952948",
+      "prompt_characters": 1859
+    },
+    {
+      "file": "original/06-evolution-feasibility.md",
+      "title": "Evolution: hypothesis feasibility improvement",
+      "note": "9.4",
+      "pdf_pages": [
+        67,
+        68
+      ],
+      "placeholders": [
+        "goal",
+        "hypothesis",
+        "preferences"
+      ],
+      "prompt_sha256": "243161ba883781e3f8a247bcecb5e6ad096f2339151481ebb2f096d24e22c561",
+      "prompt_characters": 969
+    },
+    {
+      "file": "original/07-evolution-out-of-the-box.md",
+      "title": "Evolution: hypothesis generation through out-of-the-box thinking",
+      "note": "9.4",
+      "pdf_pages": [
+        68,
+        68
+      ],
+      "placeholders": [
+        "goal",
+        "hypotheses",
+        "preferences"
+      ],
+      "prompt_sha256": "9ba408718e83682c92b82e4b76b89ced1479ae36d30d36607e127384bdc0d686",
+      "prompt_characters": 854
+    },
+    {
+      "file": "original/08-meta-review.md",
+      "title": "Meta-review: review synthesis",
+      "note": "9.5",
+      "pdf_pages": [
+        69,
+        69
+      ],
+      "placeholders": [
+        "goal",
+        "instructions",
+        "preferences",
+        "reviews"
+      ],
+      "prompt_sha256": "e8d1bed15299443dac8964bef3253681d9bed291ce3b979841d04c2a2ca0e8c0",
+      "prompt_characters": 692
+    }
+  ],
+  "no_standalone_prompt_published_in_note9": [
+    "Supervisor",
+    "Proximity"
+  ]
+}
