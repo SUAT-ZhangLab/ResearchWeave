@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-15",
+  "robin": {
+    "repository": "https://github.com/Future-House/robin",
+    "commit": "4a5cce310f3bc7663a67117db88af43b84733ffe",
+    "installed_snapshot_version": "0.0.0+g4a5cce3",
+    "paper": "https://www.nature.com/articles/s41586-026-10652-y"
+  },
+  "era": {
+    "repository": "https://github.com/google-research/era",
+    "commit": "b836730b5c000526af95116b1d0e2c60c8cf0a10",
+    "paper": "https://www.nature.com/articles/s41586-026-10658-6"
+  },
+  "co_scientist": {
+    "paper": "https://www.nature.com/articles/s41586-026-10644-y",
+    "access": "https://labs.google/science/",
+    "enterprise": "https://docs.cloud.google.com/gemini/enterprise/docs/co-scientist-and-alphaevolve",
+    "local_install_available": false
+  }
+}
