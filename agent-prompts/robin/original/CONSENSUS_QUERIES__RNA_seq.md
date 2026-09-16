@@ -1,0 +1,20 @@
+# CONSENSUS_QUERIES__RNA_seq
+
+**性质：官方代码中的提示词字符串，英文内容未改写。**
+
+- 出处：[CONSENSUS_QUERIES['RNA_seq']](https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L331-L362)
+- 提交号：4a5cce310f3bc7663a67117db88af43b84733ffe
+- 作者/来源：FutureHouse technical staff / Future-House/robin
+- 许可：Apache-2.0，全文见 ../LICENSE。
+- 提取方式：Python AST literal_eval；合并相邻字符串并还原源码转义，不执行原程序。
+- 模板变量（仅供阅读）：无。
+- 下面是替换变量前的字符串；不会自动调用原系统的检索或执行工具。
+
+## 原文
+
+~~~~text
+Combine these differential expression analysis results by calculating the mode of log2FC and adjusted p values. Output the results in a file named 'consensus_results.csv', include the columns gene_symbol, log2FC and adjusted P values. In a separate file named 'top_genes.csv', output the top 10 gene symbols of the consensus most significant genes with the column name “gene_symbol”. 
+
+Create a stacked bar plot showing gene regulation consistency across all analyses. Plot regulation direction (up vs down) on x-axis and percentage of genes in each category on y-axis. Color-code by significance category: all analyses, >50% of analyses and  <50% of analyses. Include percentages within each segment and a clear legend. Exclude genes that are non-significant across all analyses.
+
+~~~~
