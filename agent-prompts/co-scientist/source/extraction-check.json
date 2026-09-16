@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-15",
+  "check": "All 8 prompt bodies occur contiguously in plain-mode PDF text extraction after ignoring whitespace and standalone None prompt-box labels. Each Markdown prompt body hash matches the manifest.",
+  "templates": [
+    {
+      "file": "original/01-generation-literature-review.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/02-generation-scientific-debate.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/03-reflection-observations.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/04-ranking-comparison.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/05-ranking-scientific-debate.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/06-evolution-feasibility.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/07-evolution-out-of-the-box.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    },
+    {
+      "file": "original/08-meta-review.md",
+      "wording_found_in_plain_pdf_text": true,
+      "content_sha256_matches": true
+    }
+  ]
+}
