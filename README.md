@@ -18,9 +18,13 @@ Give your agent this message:
 
 ## What can I use ResearchWeave for?
 
-The following are hypothetical project briefs, written to show how you might use ResearchWeave in day-to-day research. Sample counts, filenames, and preliminary observations are illustrative; they are not results from Zhang Lab or benchmarks of the system. Each example includes a concrete question, materials to provide, and a prompt you can adapt. Literature searches and analyses use the tools available to your host agent; specialized analyses need an appropriate analysis environment.
+ResearchWeave supports the following types of research problems. Each category includes a concrete, hypothetical project example. Sample counts, filenames, and preliminary observations are illustrative; they are not results from Zhang Lab or benchmarks of the system. Each example includes a concrete question, materials to provide, and a prompt you can adapt. Literature searches and analyses use the tools available to your host agent; specialized analyses need an appropriate analysis environment.
 
-### 1. Choose an mRNA delivery approach for primary T cells
+### 1. Literature review and evidence synthesis
+
+Compare published findings, assess how well they apply to your project, and identify evidence gaps before choosing a research approach.
+
+**Example: Choosing an mRNA delivery approach for primary T cells.**
 
 **Project:** A team wants to compare lipid nanoparticle formulations for delivering reporter mRNA to primary human T cells. Before starting, it needs to decide which published approaches are relevant to resting cells and which depend on prior activation.
 
@@ -30,7 +34,11 @@ The following are hypothetical project briefs, written to show how you might use
 
 **Expected output:** A source-linked comparison table, a justified shortlist, and a focused experiment plan showing what observations would support selecting a formulation.
 
-### 2. Test whether a T-cell state is associated with treatment response
+### 2. Research data analysis and interpretation
+
+Turn research data into a justified comparison, executed analyses, and conclusions that account for the study design.
+
+**Example: Testing whether a T-cell state is associated with treatment response.**
 
 **Project:** A hypothetical tumor single-cell study contains biopsies collected before and after treatment from 10 patients. The question is whether responders show a change in a cytotoxic T-cell expression program, a change in T-cell abundance, or both.
 
@@ -40,7 +48,11 @@ The following are hypothetical project briefs, written to show how you might use
 
 **Expected output:** A documented sample assessment, patient-level comparisons, reproducible figures, and a report stating which interpretation the data support and which would need further evidence.
 
-### 3. Investigate why pathway inhibition does not reduce cell growth
+### 3. Hypothesis development and experimental troubleshooting
+
+Explain unexpected or conflicting observations by comparing testable hypotheses and identifying the most informative follow-up.
+
+**Example: Investigating why pathway inhibition does not reduce cell growth.**
 
 **Project:** In an illustrative lung cancer cell-line experiment, a candidate compound reduces phosphorylated ERK at an early time point, while the later viability assay changes little. The team needs to decide whether to investigate a transient effect, another growth-supporting pathway, or the assay itself.
 
@@ -50,7 +62,11 @@ The following are hypothetical project briefs, written to show how you might use
 
 **Expected output:** A joint assessment of both assays, a small set of competing explanations, and a follow-up plan tied to a clear decision.
 
-### 4. Decide which CRISPR-screen hit deserves follow-up
+### 4. Candidate prioritization and experiment design
+
+Decide which target, intervention, or research direction to pursue first, then design experiments that address the deciding uncertainties.
+
+**Example: Deciding which CRISPR-screen hit deserves follow-up.**
 
 **Project:** A cell-based CRISPR screen has nominated three genes that may affect sensitivity to an anticancer compound. The team can investigate one gene first and wants to separate a drug-specific effect from a general reduction in cell fitness.
 
@@ -60,7 +76,11 @@ The following are hypothetical project briefs, written to show how you might use
 
 **Expected output:** A candidate comparison with linked evidence, a reasoned first choice if the evidence permits one, and a follow-up plan that can distinguish target-specific activity from general fitness effects.
 
-### 5. Improve a small model of enzyme activity with ERA
+### 5. Analysis code and predictive model improvement
+
+Compare alternative programs against a defined evaluation task, using execution results to guide improvements.
+
+**Example: Improving a small model of enzyme activity with ERA.**
 
 **Project:** A protein-engineering team has measurements for a small enzyme-variant panel and wants to compare simple models that predict residual activity after a heat challenge. Variants measured in the same experimental batch must stay together when evaluating predictions.
 
@@ -70,7 +90,11 @@ The following are hypothetical project briefs, written to show how you might use
 
 **Expected output:** Executed candidate programs, a comparison against the baseline, saved search history, and a final test result. This example requires the Docker runner and a compact function-evaluation task; the baseline and specification must implement the intended batch-aware evaluation.
 
-### 6. Update a project when follow-up experiments change the explanation
+### 6. Research updates and project handover
+
+Incorporate new evidence, revise conclusions, and help another researcher or agent continue from saved project records.
+
+**Example: Updating a project when follow-up experiments change the explanation.**
 
 **Project:** The lung cancer project in Example 3 has completed its follow-up. New measurements suggest that pathway inhibition is not sustained. Another researcher now needs to continue the project without reconstructing earlier decisions from chat messages.
 
