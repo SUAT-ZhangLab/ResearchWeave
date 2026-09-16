@@ -92,7 +92,7 @@
     },
     {
       "path": "agent-prompts/collection-manifest.json",
-      "sha256": "8e8bd2d40fe589296110b62a315fd6e1e6c6c7bf36c5565835248b241c20dd0f"
+      "sha256": "49e095dc33308fc883dda44518b4ed78ae6573dc614ff4e0be79b8f5bc99d316"
     },
     {
       "path": "agent-prompts/era/extract.py",
@@ -508,7 +508,7 @@
     },
     {
       "path": "agent-prompts/verify_extractions.py",
-      "sha256": "42028faa6c7df2e3d942db471ad734fe20d0128b5337750f82a1caa5d446b080"
+      "sha256": "a846c02224f2218dbf6a42fce11884932933d98c3b9f7a76e8d60a0b3579822d"
     },
     {
       "path": "AGENTS.md",
