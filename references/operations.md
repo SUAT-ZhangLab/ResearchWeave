@@ -1,15 +1,15 @@
-# ZhangLuo 操作说明
+# ResearchWeave 操作说明
 
-以下命令从项目根目录运行。安装为技能后，用 `python <技能目录>/zhangluo.py` 替换开头的调用。
+以下命令从项目根目录运行。安装为技能后，用 `python <技能目录>/researchweave.py` 替换开头的调用。
 
 ## 研究记录
 
 ```sh
-python zhangluo.py doctor
-python zhangluo.py research init --study "research/example" --question "研究问题"
-python zhangluo.py research record --study "research/example" --file "evidence.json" --artifact "measurements.csv"
-python zhangluo.py research status --study "research/example"
-python zhangluo.py research report --study "research/example"
+python researchweave.py doctor
+python researchweave.py research init --study "research/example" --question "研究问题"
+python researchweave.py research record --study "research/example" --file "evidence.json" --artifact "measurements.csv"
+python researchweave.py research status --study "research/example"
+python researchweave.py research report --study "research/example"
 ```
 
 合成示例在 init 中加 `--label synthetic`。record 的 `--artifact` 可重复。
@@ -30,7 +30,7 @@ kind 与字段详见 [角色方法中的记录格式](roles.md#记录格式)。e
 先保存 analysis 记录，明确 question、inputs、method、comparison、success_criteria、independent_unit 和 hypothesis_ids。
 
 ```sh
-python zhangluo.py research run --study "research/example" --analysis-id "实际返回的ID" --code "analysis.py" --input "input.json" --function run
+python researchweave.py research run --study "research/example" --analysis-id "实际返回的ID" --code "analysis.py" --input "input.json" --function run
 ```
 
 程序入口形如 `def run(data): ...; return result`，输入输出必须兼容 JSON。
@@ -39,10 +39,10 @@ python zhangluo.py research run --study "research/example" --analysis-id "实际
 ## ERA 分轮改进
 
 ```sh
-python zhangluo.py era init --session "research/example/work/era-01" --spec spec.json --baseline baseline.py
-python zhangluo.py era ask --session "research/example/work/era-01"
-python zhangluo.py era tell --session "research/example/work/era-01" --request-id "ask返回的ID" --candidate candidate.py
-python zhangluo.py era finalize --session "research/example/work/era-01"
+python researchweave.py era init --session "research/example/work/era-01" --spec spec.json --baseline baseline.py
+python researchweave.py era ask --session "research/example/work/era-01"
+python researchweave.py era tell --session "research/example/work/era-01" --request-id "ask返回的ID" --candidate candidate.py
+python researchweave.py era finalize --session "research/example/work/era-01"
 ```
 
 ask 之后由当前 agent 编写 candidate.py；tell 必须使用当前请求 ID。失败也记录。

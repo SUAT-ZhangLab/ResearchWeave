@@ -1,4 +1,4 @@
-# ZhangLuo：当前 agent 使用的角色与方法
+# ResearchWeave：当前 agent 使用的角色与方法
 
 这些中文指令是我们依据 Robin、Co-Scientist 和 ERA 的公开材料编写的适配版本。它们供当前 agent 或受委派的子智能体使用。完整来源、版本与许可见 [sources.md](sources.md)。Google 官方 Co-Scientist 服务没有安装；这里复用其公开方法。
 
