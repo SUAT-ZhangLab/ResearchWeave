@@ -15,6 +15,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python install.py --check
-      - run: python zhangluo.py doctor
+      - run: python researchweave.py doctor
       - run: python agent-prompts/verify_extractions.py
       - run: python -m unittest discover -s scripts -p "test_*.py"
