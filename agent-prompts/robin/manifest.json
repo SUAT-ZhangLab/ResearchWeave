@@ -1,0 +1,600 @@
+{
+  "system": "Robin",
+  "repository": "https://github.com/Future-House/robin",
+  "commit": "4a5cce310f3bc7663a67117db88af43b84733ffe",
+  "license": "Apache-2.0",
+  "source_file_sha256": "d4c3db3be3e95d5bf7af05df61126861b1834dbe0499331c54902d8e234cd728",
+  "static_prompt_count": 35,
+  "dynamic_expression_count": 3,
+  "static_prompts": [
+    {
+      "name": "COT",
+      "source": "robin/prompts.py",
+      "symbol": "COT",
+      "key": null,
+      "line_start": 3,
+      "line_end": 61,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L3-L61",
+      "path": "original/COT.md",
+      "characters": 3113,
+      "text_sha256": "3ebdc953c68173c650d94d01cbaf844a1843e32575fede344ce8cb7af89422f8",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "GUIDELINE",
+      "source": "robin/prompts.py",
+      "symbol": "GUIDELINE",
+      "key": null,
+      "line_start": 63,
+      "line_end": 103,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L63-L103",
+      "path": "original/GUIDELINE.md",
+      "characters": 1768,
+      "text_sha256": "95d85a8364e46568e34036e8139f3b3b24c1a5562a7ccfdbafb94ae25d8ba2bb",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "DATA_INTERPRETATION_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "DATA_INTERPRETATION_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 105,
+      "line_end": 108,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L105-L108",
+      "path": "original/DATA_INTERPRETATION_SYSTEM_MESSAGE.md",
+      "characters": 84,
+      "text_sha256": "24a8211ed80305b9e53c8b7f9b922e1333cdfad99e6cc46b7c91eecb55b8aff4",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "DATA_INTERPRETATION_CONTENT_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "DATA_INTERPRETATION_CONTENT_MESSAGE",
+      "key": null,
+      "line_start": 110,
+      "line_end": 136,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L110-L136",
+      "path": "original/DATA_INTERPRETATION_CONTENT_MESSAGE.md",
+      "characters": 1650,
+      "text_sha256": "40bf8a870a935cb5ff9f1df54a14275f61ad369082314ccc6c6d47cd66fbe3c5",
+      "template_variables": [
+        "data_html",
+        "goal"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "FOLLOWUP_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "FOLLOWUP_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 139,
+      "line_end": 145,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L139-L145",
+      "path": "original/FOLLOWUP_SYSTEM_MESSAGE.md",
+      "characters": 419,
+      "text_sha256": "a6235a5f376bdf4cea3a7f2bc5c711bce985268118022a83e11951142ce0c81c",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "FOLLOWUP_CONTENT_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "FOLLOWUP_CONTENT_MESSAGE",
+      "key": null,
+      "line_start": 147,
+      "line_end": 178,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L147-L178",
+      "path": "original/FOLLOWUP_CONTENT_MESSAGE.md",
+      "characters": 1060,
+      "text_sha256": "10323da88bf7668095ed775d0092795fce1498078c1e91135e4920bfb27aaaa8",
+      "template_variables": [
+        "analysis_summary",
+        "goal",
+        "mechanistic_insights",
+        "questions_raised"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "GENERAL_NOTEBOOK_GUIDELINES",
+      "source": "robin/prompts.py",
+      "symbol": "GENERAL_NOTEBOOK_GUIDELINES",
+      "key": null,
+      "line_start": 181,
+      "line_end": 192,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L181-L192",
+      "path": "original/GENERAL_NOTEBOOK_GUIDELINES.md",
+      "characters": 717,
+      "text_sha256": "8dae8763f8943f38aaf64727629372272966b8aec6e921f1a4df79d096876bcc",
+      "template_variables": [
+        "language"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "R_SPECIFIC_GUIDELINES",
+      "source": "robin/prompts.py",
+      "symbol": "R_SPECIFIC_GUIDELINES",
+      "key": null,
+      "line_start": 194,
+      "line_end": 224,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L194-L224",
+      "path": "original/R_SPECIFIC_GUIDELINES.md",
+      "characters": 1212,
+      "text_sha256": "f898fd0c299461eab7943ad825161ce2aef3c20762679a5a74ab208e2605531a",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CHAIN_OF_THOUGHT_AGNOSTIC",
+      "source": "robin/prompts.py",
+      "symbol": "CHAIN_OF_THOUGHT_AGNOSTIC",
+      "key": null,
+      "line_start": 226,
+      "line_end": 276,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L226-L276",
+      "path": "original/CHAIN_OF_THOUGHT_AGNOSTIC.md",
+      "characters": 2748,
+      "text_sha256": "8cdd1dd12f8af893765d0851b1b2a72210d7ba200c898b420d6f6364253b690e",
+      "template_variables": [
+        "language"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ANALYSIS_QUERIES__flow_cytometry",
+      "source": "robin/prompts.py",
+      "symbol": "ANALYSIS_QUERIES",
+      "key": "flow_cytometry",
+      "line_start": 279,
+      "line_end": 328,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L279-L328",
+      "path": "original/ANALYSIS_QUERIES__flow_cytometry.md",
+      "characters": 2174,
+      "text_sha256": "07ec3a960603fbe335a7cdb396cc1379950d1570fc6b6280d48e834e991bc8cd",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ANALYSIS_QUERIES__RNA_seq",
+      "source": "robin/prompts.py",
+      "symbol": "ANALYSIS_QUERIES",
+      "key": "RNA_seq",
+      "line_start": 279,
+      "line_end": 328,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L279-L328",
+      "path": "original/ANALYSIS_QUERIES__RNA_seq.md",
+      "characters": 772,
+      "text_sha256": "0825276b8782a00bdac12df5272342f90ac7409b687863b81e4190307562d385",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CONSENSUS_QUERIES__flow_cytometry",
+      "source": "robin/prompts.py",
+      "symbol": "CONSENSUS_QUERIES",
+      "key": "flow_cytometry",
+      "line_start": 331,
+      "line_end": 362,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L331-L362",
+      "path": "original/CONSENSUS_QUERIES__flow_cytometry.md",
+      "characters": 882,
+      "text_sha256": "79470541d435ae4477fd8887bbab35460fbdf3fba7fd926674c19eb7e0abf721",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CONSENSUS_QUERIES__RNA_seq",
+      "source": "robin/prompts.py",
+      "symbol": "CONSENSUS_QUERIES",
+      "key": "RNA_seq",
+      "line_start": 331,
+      "line_end": 362,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L331-L362",
+      "path": "original/CONSENSUS_QUERIES__RNA_seq.md",
+      "characters": 781,
+      "text_sha256": "d1bf6504f8ef7045a7072f7d44ed22c2adca9bb029e8c5b402a1e6b3bc1ceb4c",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_LITERATURE_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_LITERATURE_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 367,
+      "line_end": 372,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L367-L372",
+      "path": "original/ASSAY_LITERATURE_SYSTEM_MESSAGE.md",
+      "characters": 223,
+      "text_sha256": "c612402d4cea4ae295df3b7122631298f3fd47d0afaa01100dd5fc43798eb724",
+      "template_variables": [
+        "num_assays"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_LITERATURE_USER_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_LITERATURE_USER_MESSAGE",
+      "key": null,
+      "line_start": 374,
+      "line_end": 389,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L374-L389",
+      "path": "original/ASSAY_LITERATURE_USER_MESSAGE.md",
+      "characters": 938,
+      "text_sha256": "d4ada4513cd60243c2a80fdcfd4569a44ef8086e1d99ff817cb37ba9061346a8",
+      "template_variables": [
+        "disease_name",
+        "num_queries"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_PROPOSAL_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_PROPOSAL_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 392,
+      "line_end": 417,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L392-L417",
+      "path": "original/ASSAY_PROPOSAL_SYSTEM_MESSAGE.md",
+      "characters": 1290,
+      "text_sha256": "6c1d305ed9a1942410f3b7e4b9bb098634299df8c81b595528e4c367a3e951b1",
+      "template_variables": [
+        "num_assays"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_PROPOSAL_USER_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_PROPOSAL_USER_MESSAGE",
+      "key": null,
+      "line_start": 419,
+      "line_end": 425,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L419-L425",
+      "path": "original/ASSAY_PROPOSAL_USER_MESSAGE.md",
+      "characters": 256,
+      "text_sha256": "4451a8b2f80382ca2c8cf047bbf17fff5931508e434dc011349a0a7c538d00b5",
+      "template_variables": [
+        "assay_lit_review_output",
+        "disease_name",
+        "num_assays"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_HYPOTHESIS_SYSTEM_PROMPT",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_HYPOTHESIS_SYSTEM_PROMPT",
+      "key": null,
+      "line_start": 428,
+      "line_end": 438,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L428-L438",
+      "path": "original/ASSAY_HYPOTHESIS_SYSTEM_PROMPT.md",
+      "characters": 610,
+      "text_sha256": "ed4b4e4d0383e5c553fa0b6e607179f121ae3bde6ba87071fb0c9248583bb067",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_HYPOTHESIS_FORMAT",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_HYPOTHESIS_FORMAT",
+      "key": null,
+      "line_start": 440,
+      "line_end": 455,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L440-L455",
+      "path": "original/ASSAY_HYPOTHESIS_FORMAT.md",
+      "characters": 882,
+      "text_sha256": "1ea4ea2756d324d3648689b1fc169bb304de9b3b6f04ef68c50f759f9b41253b",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_RANKING_SYSTEM_PROMPT",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_RANKING_SYSTEM_PROMPT",
+      "key": null,
+      "line_start": 458,
+      "line_end": 476,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L458-L476",
+      "path": "original/ASSAY_RANKING_SYSTEM_PROMPT.md",
+      "characters": 1186,
+      "text_sha256": "74b81d0a70725d0612e136272776dae42565a533f338a3c78ea95aed0265c5eb",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "ASSAY_RANKING_PROMPT_FORMAT",
+      "source": "robin/prompts.py",
+      "symbol": "ASSAY_RANKING_PROMPT_FORMAT",
+      "key": null,
+      "line_start": 478,
+      "line_end": 496,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L478-L496",
+      "path": "original/ASSAY_RANKING_PROMPT_FORMAT.md",
+      "characters": 1068,
+      "text_sha256": "a5de9a630952d1b0a001e3c61895a12f4454843dc04c5d25fb7519cbfba9ec5d",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "SYNTHESIZE_USER_CONTENT",
+      "source": "robin/prompts.py",
+      "symbol": "SYNTHESIZE_USER_CONTENT",
+      "key": null,
+      "line_start": 499,
+      "line_end": 511,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L499-L511",
+      "path": "original/SYNTHESIZE_USER_CONTENT.md",
+      "characters": 543,
+      "text_sha256": "46791a1c05f51e34f0c39ae5be5f5f0629815935849fa4983f9bc6830445b028",
+      "template_variables": [
+        "assay_name",
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "SYNTHESIZE_SYSTEM_MESSAGE_CONTENT",
+      "source": "robin/prompts.py",
+      "symbol": "SYNTHESIZE_SYSTEM_MESSAGE_CONTENT",
+      "key": null,
+      "line_start": 513,
+      "line_end": 517,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L513-L517",
+      "path": "original/SYNTHESIZE_SYSTEM_MESSAGE_CONTENT.md",
+      "characters": 158,
+      "text_sha256": "4f02f30c51eeaf1bf7c26ebcbb893efdf12ba12531fccc4b35c4e8d2ae97f438",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_QUERY_GENERATION_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_QUERY_GENERATION_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 523,
+      "line_end": 545,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L523-L545",
+      "path": "original/CANDIDATE_QUERY_GENERATION_SYSTEM_MESSAGE.md",
+      "characters": 1355,
+      "text_sha256": "27ca8a2d4709c6f9d8cfb078bb5ded00f594fd307d08bf32197eec9511e92f61",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "EXPERIMENTAL_INSIGHTS_APPENDAGE",
+      "source": "robin/prompts.py",
+      "symbol": "EXPERIMENTAL_INSIGHTS_APPENDAGE",
+      "key": null,
+      "line_start": 548,
+      "line_end": 556,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L548-L556",
+      "path": "original/EXPERIMENTAL_INSIGHTS_APPENDAGE.md",
+      "characters": 391,
+      "text_sha256": "2340b17d6a545e96300405aad89c1cd8e7aa3cede29a7975139c2f5d338ca61a",
+      "template_variables": [
+        "candidate_generation_goal",
+        "experimental_insights_analysis_summary",
+        "experimental_insights_mechanistic_insights",
+        "experimental_insights_questions_raised"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_QUERY_GENERATION_CONTENT_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_QUERY_GENERATION_CONTENT_MESSAGE",
+      "key": null,
+      "line_start": 559,
+      "line_end": 589,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L559-L589",
+      "path": "original/CANDIDATE_QUERY_GENERATION_CONTENT_MESSAGE.md",
+      "characters": 1895,
+      "text_sha256": "4f0395d323b1273bfd894e5a6b3796c3ecbb7996e0644cb7885b2052e710f43c",
+      "template_variables": [
+        "candidate_generation_goal",
+        "disease_name",
+        "double_queries",
+        "num_queries"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_GENERATION_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_GENERATION_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 592,
+      "line_end": 640,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L592-L640",
+      "path": "original/CANDIDATE_GENERATION_SYSTEM_MESSAGE.md",
+      "characters": 2960,
+      "text_sha256": "18fce0e51e7474ba54ef29a5a825d6fe279f50cad4b33b42c76201aab94f1148",
+      "template_variables": [
+        "disease_name",
+        "num_candidates"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_GENERATION_USER_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_GENERATION_USER_MESSAGE",
+      "key": null,
+      "line_start": 642,
+      "line_end": 647,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L642-L647",
+      "path": "original/CANDIDATE_GENERATION_USER_MESSAGE.md",
+      "characters": 251,
+      "text_sha256": "96a5dd9141bd3898d418a4a521b3498e8c71b272353b6cfc5ee92d5f8a17dc9f",
+      "template_variables": [
+        "disease_name",
+        "num_candidates",
+        "therapeutic_candidate_review_output"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "EXPERIMENTAL_INSIGHTS_FOR_CANDIDATE_GENERATION",
+      "source": "robin/prompts.py",
+      "symbol": "EXPERIMENTAL_INSIGHTS_FOR_CANDIDATE_GENERATION",
+      "key": null,
+      "line_start": 649,
+      "line_end": 657,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L649-L657",
+      "path": "original/EXPERIMENTAL_INSIGHTS_FOR_CANDIDATE_GENERATION.md",
+      "characters": 391,
+      "text_sha256": "2340b17d6a545e96300405aad89c1cd8e7aa3cede29a7975139c2f5d338ca61a",
+      "template_variables": [
+        "candidate_generation_goal",
+        "experimental_insights_analysis_summary",
+        "experimental_insights_mechanistic_insights",
+        "experimental_insights_questions_raised"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_LIT_REVIEW_DIRECTION_PROMPT",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_LIT_REVIEW_DIRECTION_PROMPT",
+      "key": null,
+      "line_start": 659,
+      "line_end": 669,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L659-L669",
+      "path": "original/CANDIDATE_LIT_REVIEW_DIRECTION_PROMPT.md",
+      "characters": 595,
+      "text_sha256": "b3e1f872730613cf7990dcce5ff37301620a72c43982eebf910d95bd84147003",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_REPORT_FORMAT",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_REPORT_FORMAT",
+      "key": null,
+      "line_start": 671,
+      "line_end": 689,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L671-L689",
+      "path": "original/CANDIDATE_REPORT_FORMAT.md",
+      "characters": 1272,
+      "text_sha256": "4c11f81753cc84f464ddf18e4392d440d0a21bfae62a600c104594909a4ec897",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_RANKING_SYSTEM_PROMPT",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_RANKING_SYSTEM_PROMPT",
+      "key": null,
+      "line_start": 691,
+      "line_end": 760,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L691-L760",
+      "path": "original/CANDIDATE_RANKING_SYSTEM_PROMPT.md",
+      "characters": 5140,
+      "text_sha256": "2022ed69226761593f2b1ed80e5fcbd3473a5c5d614d3cad587b1da2ec2618a7",
+      "template_variables": [
+        "disease_name"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "CANDIDATE_RANKING_PROMPT_FORMAT",
+      "source": "robin/prompts.py",
+      "symbol": "CANDIDATE_RANKING_PROMPT_FORMAT",
+      "key": null,
+      "line_start": 762,
+      "line_end": 780,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L762-L780",
+      "path": "original/CANDIDATE_RANKING_PROMPT_FORMAT.md",
+      "characters": 1079,
+      "text_sha256": "02edfaa4e6a36061e0f0feb840c96bad2de296a673017db25fe1ae7e161fcf6c",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "FINAL_REPORT_FORMATTING_USER_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "FINAL_REPORT_FORMATTING_USER_MESSAGE",
+      "key": null,
+      "line_start": 785,
+      "line_end": 830,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L785-L830",
+      "path": "original/FINAL_REPORT_FORMATTING_USER_MESSAGE.md",
+      "characters": 2816,
+      "text_sha256": "7f97262c342458db9f6e6717de38e3138a6e57cba762a6a31f8350ead7faf48a",
+      "template_variables": [
+        "answer_text",
+        "sources_text"
+      ],
+      "extraction": "ast.literal_eval"
+    },
+    {
+      "name": "FINAL_REPORT_FORMATTING_SYSTEM_MESSAGE",
+      "source": "robin/prompts.py",
+      "symbol": "FINAL_REPORT_FORMATTING_SYSTEM_MESSAGE",
+      "key": null,
+      "line_start": 832,
+      "line_end": 835,
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/prompts.py#L832-L835",
+      "path": "original/FINAL_REPORT_FORMATTING_SYSTEM_MESSAGE.md",
+      "characters": 111,
+      "text_sha256": "9c3034bb58f17c036922ee0d8c97e714ba37843dbe241841fcb1c099c4ef0fc5",
+      "template_variables": [],
+      "extraction": "ast.literal_eval"
+    }
+  ],
+  "dynamic_expressions": [
+    {
+      "name": "utils__user_prompt",
+      "source": "robin/utils.py",
+      "line_start": 600,
+      "line_end": 617,
+      "path": "original/utils__user_prompt.md",
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/utils.py#L600-L617",
+      "expression_sha256": "ab0887727176eeb8998fc3f240cfdba4d6b50a835259a3125bb225e316b55058"
+    },
+    {
+      "name": "analyses__analysis_prompt",
+      "source": "robin/analyses.py",
+      "line_start": 34,
+      "line_end": 41,
+      "path": "original/analyses__analysis_prompt.md",
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/analyses.py#L34-L41",
+      "expression_sha256": "b78608acfa469ae0d461ba47bc1c812844f11266fdf457b209fcee2bea830667"
+    },
+    {
+      "name": "analyses__consensus_prompt",
+      "source": "robin/analyses.py",
+      "line_start": 43,
+      "line_end": 50,
+      "path": "original/analyses__consensus_prompt.md",
+      "source_url": "https://github.com/Future-House/robin/blob/4a5cce310f3bc7663a67117db88af43b84733ffe/robin/analyses.py#L43-L50",
+      "expression_sha256": "2a6c3a197eb9133ebeab0fbb3280a27bf7dccf32dae883170f5594d57b081d63"
+    }
+  ],
+  "role_descriptions_are_editorial": true,
+  "role_description_count": 14,
+  "upstream_files_modified": false
+}
