@@ -1,0 +1,19 @@
+[
+  {
+    "system": "Robin",
+    "exact_source_literals_verified": 35
+  },
+  {
+    "system": "ERA",
+    "output_hashes_verified": 6
+  },
+  {
+    "system": "Co-Scientist",
+    "source_pdf_hash_verified": true,
+    "prompt_bodies_verified": 8
+  },
+  {
+    "system": "Finch",
+    "prompt_bodies_verified": 17
+  }
+]

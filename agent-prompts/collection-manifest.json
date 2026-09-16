@@ -1,0 +1,634 @@
+{
+  "collection": "Robin / Co-Scientist / ERA public agent prompts and methods",
+  "date": "2026-09-15",
+  "counts": {
+    "robin_static": 35,
+    "robin_dynamic_expressions": 3,
+    "co_scientist_prompts": 8,
+    "era_prompt_and_task_blocks": 6,
+    "finch_supplementary_prompts": 17
+  },
+  "verification_report": "extraction-check.json",
+  "includes": "English public originals, Chinese role guides, source references, licenses, extraction scripts",
+  "excludes": [
+    "Python dependency installations",
+    "current hosted-service hidden instructions"
+  ],
+  "files": [
+    {
+      "path": "co-scientist/manifest.json",
+      "bytes": 5574,
+      "sha256": "29d0348c1aee2be46e9ec4e021d3594d94d060b55629ccbfa7a3f3b6e8a24598"
+    },
+    {
+      "path": "co-scientist/original/00-all-published-prompts.md",
+      "bytes": 12373,
+      "sha256": "155353339bd69c533b0b2aeeef2c858d0d6a8227a7a79eb3600360e8b5b097fb"
+    },
+    {
+      "path": "co-scientist/original/00-orchestration-pseudocode.md",
+      "bytes": 8599,
+      "sha256": "d0d99d98196e7725d09d3ef37c045804d338dde53f8ad892fdb39373b343fc67"
+    },
+    {
+      "path": "co-scientist/original/01-generation-literature-review.md",
+      "bytes": 2017,
+      "sha256": "f42929e47fd2643f131fcb5e7862378327dbc856d8c6d9535d37b1f9949a2084"
+    },
+    {
+      "path": "co-scientist/original/02-generation-scientific-debate.md",
+      "bytes": 2940,
+      "sha256": "94910082acc9f4766a5ffab74175d28a74205b4a8aa4b1cbe7db112c8761a14a"
+    },
+    {
+      "path": "co-scientist/original/03-reflection-observations.md",
+      "bytes": 3065,
+      "sha256": "6d01278a8182a2650f85efaf199778831bdad1708d553b4ff8f0139afd024a9e"
+    },
+    {
+      "path": "co-scientist/original/04-ranking-comparison.md",
+      "bytes": 1999,
+      "sha256": "af36599fd1d32307ea8a8a2ec5f85211ae9d4c1e3ff90cb8db27b81fda1f028f"
+    },
+    {
+      "path": "co-scientist/original/05-ranking-scientific-debate.md",
+      "bytes": 3086,
+      "sha256": "8dd63bc0f4337474cd7ae993f0399b7743a5e709181f6426cd3afd550917124a"
+    },
+    {
+      "path": "co-scientist/original/06-evolution-feasibility.md",
+      "bytes": 2090,
+      "sha256": "fcf24fa916eb14a63088ba77259e555f7a4f5d8c5ddf7f85e119ee14bf2a55e3"
+    },
+    {
+      "path": "co-scientist/original/07-evolution-out-of-the-box.md",
+      "bytes": 1989,
+      "sha256": "d98e5bbf1aedcd627a4a8819af22e3ccc6fc70249d9ef0503883141650a7981c"
+    },
+    {
+      "path": "co-scientist/original/08-meta-review.md",
+      "bytes": 1808,
+      "sha256": "b5be3cda7428cacfd57c5eb7e5d701df358310c3f4780cfca0d742aacd356f94"
+    },
+    {
+      "path": "co-scientist/README.md",
+      "bytes": 812,
+      "sha256": "f30b54fe2e796f6f5cfb2138e1de6e6eb5c61fdb23028486fcd3d4653d288e4a"
+    },
+    {
+      "path": "co-scientist/requirements-extraction.txt",
+      "bytes": 15,
+      "sha256": "8e5564953d91826ba562a797d517e8cb2aa9aef72f15aa14b102afb7b8244916"
+    },
+    {
+      "path": "co-scientist/roles.md",
+      "bytes": 8283,
+      "sha256": "006e1b84b66f7eef5f541eec10fa890bc8e21dd2146b10da44c4927104e04263"
+    },
+    {
+      "path": "co-scientist/scripts/extract_prompts.py",
+      "bytes": 7072,
+      "sha256": "e87a63de42eb1919e0ede888260810120e1aea493bd67186c6135d92263a465a"
+    },
+    {
+      "path": "co-scientist/source/41586_2026_10644_MOESM1_ESM.pdf",
+      "bytes": 2868250,
+      "sha256": "e5595509a10da6e4d24c7df399d0f60e922d628cf1647df3880f8b0ba1c93fbc"
+    },
+    {
+      "path": "co-scientist/source/extraction-check.json",
+      "bytes": 1517,
+      "sha256": "419768e21bf53bf304688594311dc3484b1da2e9950b5a2a1bceee24ddf1f9f1"
+    },
+    {
+      "path": "co-scientist/source/SOURCE-LICENSE.md",
+      "bytes": 1324,
+      "sha256": "2c2bea35577a6566b434b411591fd934b2349fa4b522e9ac995f7ad619504e88"
+    },
+    {
+      "path": "co-scientist/source/supplementary-extracted-layout.txt",
+      "bytes": 276993,
+      "sha256": "10b5f2247fbaf75d9354bff9fdd548f8ec1c3566d48ed51f1b27a1f093b2e0f7"
+    },
+    {
+      "path": "era/extract.py",
+      "bytes": 5984,
+      "sha256": "7a67587a39d46b9140ebe358261ad2e44f4496c7196f1b736ada27f99db763ef"
+    },
+    {
+      "path": "era/manifest.json",
+      "bytes": 8166,
+      "sha256": "378627783adf14f767cd8c37283a69198cc74e1eda5904706408ed6f2e90efc2"
+    },
+    {
+      "path": "era/original/01-gemini-role-template.md",
+      "bytes": 207,
+      "sha256": "473cc2bf871e213d9d69636a3b02e3ef2b639f307f40d4937c8c3bb50d8b79ae"
+    },
+    {
+      "path": "era/original/02-program-improvement-template.md",
+      "bytes": 1267,
+      "sha256": "fbc0eb883a4464cbf5ef07a0313a791561bdda943aed54f86b238ff7f7acc7c8"
+    },
+    {
+      "path": "era/original/03-single-cell-overview.md",
+      "bytes": 1121,
+      "sha256": "1bb68342b71fa572013916eabd9d73826c06ff223cd99c33d24db58ea71a976b"
+    },
+    {
+      "path": "era/original/04-single-cell-task.md",
+      "bytes": 11333,
+      "sha256": "956a9ca90538c2bd9bda68029417bc1b9fe5406672dca14ab4af65995fca3b07"
+    },
+    {
+      "path": "era/original/05-flu-overview.md",
+      "bytes": 873,
+      "sha256": "9c865276a5b47c11d541864597ba3b7242cfc994669f60205e6d6293dcea811f"
+    },
+    {
+      "path": "era/original/06-flu-task.md",
+      "bytes": 5701,
+      "sha256": "09cabd0d91a550563c346f77807f2b275d6bbbc273081bba88687b9e3d3c8feb"
+    },
+    {
+      "path": "era/original/LICENSE",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "era/roles.md",
+      "bytes": 8254,
+      "sha256": "428b03c151b796e67a12eef5b1bb784e5d8a54d997d8b4c1ba04aa2b6f477be5"
+    },
+    {
+      "path": "extraction-check.json",
+      "bytes": 329,
+      "sha256": "738cd8b69218cf448378b937c2814743f6242a7a0755bc7a44c82a37364e3d46"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5189,
+      "sha256": "c60b8d03d025927112c8b4b87f33a5bbecee9f523495ab2676bdb50c7b203d92"
+    },
+    {
+      "path": "robin/extract.py",
+      "bytes": 14244,
+      "sha256": "caa947507e8d365fa1c159d0451e9f371c5ddef500dfd84deadd904822985caf"
+    },
+    {
+      "path": "robin/LICENSE",
+      "bytes": 11542,
+      "sha256": "a88e4babb975e607b124041048ddaed47c7219974a130db12917dbb11cd4a313"
+    },
+    {
+      "path": "robin/manifest.json",
+      "bytes": 24405,
+      "sha256": "d1764bb3128a37b4c32026fb477041bb3d6b855e185a71c8b406c5b26f018223"
+    },
+    {
+      "path": "robin/methods.md",
+      "bytes": 7939,
+      "sha256": "dcd3410ac9a1b5cdf823279173230b0e347cf1dacbac1beb64cd9285ae378ab5"
+    },
+    {
+      "path": "robin/original/analyses__analysis_prompt.md",
+      "bytes": 532,
+      "sha256": "5fba53f3e286bab6deda560bc2758bb3c5875ab42120e7af6348a9e678451068"
+    },
+    {
+      "path": "robin/original/analyses__consensus_prompt.md",
+      "bytes": 534,
+      "sha256": "727a6b67ba387418652a597c07691d8d35027db8400e49989dfb8ebc124e76e4"
+    },
+    {
+      "path": "robin/original/ANALYSIS_QUERIES__flow_cytometry.md",
+      "bytes": 2955,
+      "sha256": "e605c6cfe41f2915dae112ad58a677caefff375fdd16bc08ce6c5a9590915d16"
+    },
+    {
+      "path": "robin/original/ANALYSIS_QUERIES__RNA_seq.md",
+      "bytes": 1503,
+      "sha256": "5784543e9a279e3272cb1104ffb2b5919bc37e5750a7c72e0b77df116fd660ec"
+    },
+    {
+      "path": "robin/original/ASSAY_HYPOTHESIS_FORMAT.md",
+      "bytes": 1611,
+      "sha256": "8f8be670dd329f020f4b21b056c6fa34dc17fcf4b073845bf215d20050469699"
+    },
+    {
+      "path": "robin/original/ASSAY_HYPOTHESIS_SYSTEM_PROMPT.md",
+      "bytes": 1351,
+      "sha256": "0130aa0cdfca1c047b472505ff8decf6582d398e9da0d765b2e2cbb329f71c60"
+    },
+    {
+      "path": "robin/original/ASSAY_LITERATURE_SYSTEM_MESSAGE.md",
+      "bytes": 962,
+      "sha256": "08e70a75469e77f9c85f52889de5db4a75bbf0c47c3411de10c839df40bb97c8"
+    },
+    {
+      "path": "robin/original/ASSAY_LITERATURE_USER_MESSAGE.md",
+      "bytes": 1692,
+      "sha256": "aa8d716a5d9fbebd69637a9d96ebf6edd263c69f97aa876b34c2622de27d8e0f"
+    },
+    {
+      "path": "robin/original/ASSAY_PROPOSAL_SYSTEM_MESSAGE.md",
+      "bytes": 2040,
+      "sha256": "4446e469215b698a0082b2ff131e9ba3c894c355c2e0a29a60ae4156d3397769"
+    },
+    {
+      "path": "robin/original/ASSAY_PROPOSAL_USER_MESSAGE.md",
+      "bytes": 1028,
+      "sha256": "9944e4b93f68d7ddb993f03cae671dc9c18f2efba8f90361a357ae678237605e"
+    },
+    {
+      "path": "robin/original/ASSAY_RANKING_PROMPT_FORMAT.md",
+      "bytes": 1802,
+      "sha256": "79066e08f2dda4c7f8decd878ff462fb6b680f825b54f483fa179715346326b4"
+    },
+    {
+      "path": "robin/original/ASSAY_RANKING_SYSTEM_PROMPT.md",
+      "bytes": 1927,
+      "sha256": "1599006790a97cfe31acc077da990e4ffc4c5ef10a1a3ca7462917278627ff6f"
+    },
+    {
+      "path": "robin/original/CANDIDATE_GENERATION_SYSTEM_MESSAGE.md",
+      "bytes": 3753,
+      "sha256": "3ca801084d54ee75cfe7686f644ada30f24b2c3a1ed54d0c712da0383e28be86"
+    },
+    {
+      "path": "robin/original/CANDIDATE_GENERATION_USER_MESSAGE.md",
+      "bytes": 1051,
+      "sha256": "c6f26a84c8887c3dd0219ca791040c379c96954d3708b7843abb19c33b3122ca"
+    },
+    {
+      "path": "robin/original/CANDIDATE_LIT_REVIEW_DIRECTION_PROMPT.md",
+      "bytes": 1350,
+      "sha256": "3da7143db15d6bfc93d6844aadbe118035d898fbb75781496b42662e0174d502"
+    },
+    {
+      "path": "robin/original/CANDIDATE_QUERY_GENERATION_CONTENT_MESSAGE.md",
+      "bytes": 2723,
+      "sha256": "61707708bd52114922ff6b9f6b1c0cc91e679bff4f5ad90e36dfdca6bb5bdbbe"
+    },
+    {
+      "path": "robin/original/CANDIDATE_QUERY_GENERATION_SYSTEM_MESSAGE.md",
+      "bytes": 2129,
+      "sha256": "c641238f1c0d8d3341ebb5c61fdc764b955d4c934168f81604ff9db21746665e"
+    },
+    {
+      "path": "robin/original/CANDIDATE_RANKING_PROMPT_FORMAT.md",
+      "bytes": 1820,
+      "sha256": "fe4b059ebf167606371244191d75e365fa017f35caa0c15dab3edfa0d7866849"
+    },
+    {
+      "path": "robin/original/CANDIDATE_RANKING_SYSTEM_PROMPT.md",
+      "bytes": 5916,
+      "sha256": "e946d50211bdfa9fff75a156f83e75ff1bbaf19d564859ef697f933cfdd9716e"
+    },
+    {
+      "path": "robin/original/CANDIDATE_REPORT_FORMAT.md",
+      "bytes": 2002,
+      "sha256": "c92b3c27314bc6056b1a246f3e208d67c9d5ad91c80ae4ae6cb0780e35a4c825"
+    },
+    {
+      "path": "robin/original/CHAIN_OF_THOUGHT_AGNOSTIC.md",
+      "bytes": 3523,
+      "sha256": "eaa117ea81fbc5356459da74ef5fd974f409c34cc9c8135178e4c234b3cace9c"
+    },
+    {
+      "path": "robin/original/CONSENSUS_QUERIES__flow_cytometry.md",
+      "bytes": 1638,
+      "sha256": "1e8354fbb94b561ae85bf98608d1f99a64a883a7861fec3c61913768e3c0c691"
+    },
+    {
+      "path": "robin/original/CONSENSUS_QUERIES__RNA_seq.md",
+      "bytes": 1512,
+      "sha256": "374622f7250df76f020f4de2efbe6de63ac729bad244f6b85ba06d215c214c56"
+    },
+    {
+      "path": "robin/original/COT.md",
+      "bytes": 3844,
+      "sha256": "78c1640dc29cf56da9b189286b13808bc2377b99b58c0a298c0b00384556168f"
+    },
+    {
+      "path": "robin/original/DATA_INTERPRETATION_CONTENT_MESSAGE.md",
+      "bytes": 2413,
+      "sha256": "eeae8bbd79017d475766620fcd2181bedf1d11374b749b7d8dadec681db4d51f"
+    },
+    {
+      "path": "robin/original/DATA_INTERPRETATION_SYSTEM_MESSAGE.md",
+      "bytes": 822,
+      "sha256": "bc295050a4c6f237f2dd43aded493d205c142d3a44e0ae52d23c12b07e9518d4"
+    },
+    {
+      "path": "robin/original/EXPERIMENTAL_INSIGHTS_APPENDAGE.md",
+      "bytes": 1273,
+      "sha256": "4f6681463e6e781085ef2ec0f6f3417987e8655f1835c9da036459633bbd0e8b"
+    },
+    {
+      "path": "robin/original/EXPERIMENTAL_INSIGHTS_FOR_CANDIDATE_GENERATION.md",
+      "bytes": 1303,
+      "sha256": "2a1fdefe28c4e11f300c4cc72e89b471c5e3c6d664ecf6ac6657436ea568f73b"
+    },
+    {
+      "path": "robin/original/FINAL_REPORT_FORMATTING_SYSTEM_MESSAGE.md",
+      "bytes": 857,
+      "sha256": "4eaa4c7fc5b42871cf00415c613cc9b6b36d1303be9fd30d60db85b51e3e0072"
+    },
+    {
+      "path": "robin/original/FINAL_REPORT_FORMATTING_USER_MESSAGE.md",
+      "bytes": 3613,
+      "sha256": "841afd3f03ab99762d0225b09846758190a7a4f1bc9b9a2edb7115835e96eda8"
+    },
+    {
+      "path": "robin/original/FOLLOWUP_CONTENT_MESSAGE.md",
+      "bytes": 1859,
+      "sha256": "14551341299c1656fc806da3db6f534cb4b1ef4e125fe5efcb704a25ecdfe515"
+    },
+    {
+      "path": "robin/original/FOLLOWUP_SYSTEM_MESSAGE.md",
+      "bytes": 1135,
+      "sha256": "2cff42fab7965cdfc5feb6ac63d874ba6c28110cf4617e6c1c976a36e7e35b9e"
+    },
+    {
+      "path": "robin/original/GENERAL_NOTEBOOK_GUIDELINES.md",
+      "bytes": 1457,
+      "sha256": "47c4a2ed94b9eadab6915fc69e1223b5372da5e4b74281bf331fc1730096bb9c"
+    },
+    {
+      "path": "robin/original/GUIDELINE.md",
+      "bytes": 2495,
+      "sha256": "97c0f8662bbb2d2edcad9f6157b920541ef9004dbc8a31549e85ea8537287a34"
+    },
+    {
+      "path": "robin/original/R_SPECIFIC_GUIDELINES.md",
+      "bytes": 1954,
+      "sha256": "a9962451945030a90b9bb97b86cbee4ca389e8975b8f2d11bf346d19dd9da0b4"
+    },
+    {
+      "path": "robin/original/SYNTHESIZE_SYSTEM_MESSAGE_CONTENT.md",
+      "bytes": 903,
+      "sha256": "040bbe58d721810b36df79f38c797149f8baef1daec4ec28762d325af52e7574"
+    },
+    {
+      "path": "robin/original/SYNTHESIZE_USER_CONTENT.md",
+      "bytes": 1288,
+      "sha256": "ac1f87713f55137d43ea70650c1fc0766f53bb50278fc26523758a1b9e470e94"
+    },
+    {
+      "path": "robin/original/utils__user_prompt.md",
+      "bytes": 1085,
+      "sha256": "f21d625aa1efdfb8fe6dca23df8b10a476d6ad0abdc484bbc9530e91d8ba72a9"
+    },
+    {
+      "path": "robin/roles/01-assay-query-writer.md",
+      "bytes": 868,
+      "sha256": "87f45f99e35f0d25b3048950071480f05ce1187e8f98e6096bf92258c29f5667"
+    },
+    {
+      "path": "robin/roles/02-assay-designer.md",
+      "bytes": 817,
+      "sha256": "bb83cab74da7a1d112a8584da11e444ae6a6d70ab2fbcccfab427cd95f2b6082"
+    },
+    {
+      "path": "robin/roles/03-assay-evidence-researcher.md",
+      "bytes": 821,
+      "sha256": "6ab5efe22e3c244ca1360e3643c1c467c803d99d550503b92b09db48d41e4022"
+    },
+    {
+      "path": "robin/roles/04-assay-reviewer.md",
+      "bytes": 906,
+      "sha256": "90e5bdad0c70d0618f851932d00a1a2c821a63cd17a167f62a4b555039ebd94a"
+    },
+    {
+      "path": "robin/roles/05-objective-writer.md",
+      "bytes": 823,
+      "sha256": "184712d042a4b893149dc57922ee1f9247f7f48e9981b6b0dbb274c20d282576"
+    },
+    {
+      "path": "robin/roles/06-candidate-query-writer.md",
+      "bytes": 1010,
+      "sha256": "a2dafd2224007e5c29fdbf9f67394814531372e53247709b75a25274fb15c243"
+    },
+    {
+      "path": "robin/roles/07-candidate-generator.md",
+      "bytes": 1028,
+      "sha256": "7cd43b8c0a3826efae9dbd99110d7b2b7de315f36b51fae44fdbb24cda01bf3d"
+    },
+    {
+      "path": "robin/roles/08-candidate-evidence-researcher.md",
+      "bytes": 848,
+      "sha256": "ea91ac154fc671f8a0c2a0196174099a189cd33d0ccf12332ccc40e4200e6959"
+    },
+    {
+      "path": "robin/roles/09-candidate-reviewer.md",
+      "bytes": 915,
+      "sha256": "246c53da83d3b73494bd108afa8dacd86b238190a8fb9f9ff4b3ee1105a9814e"
+    },
+    {
+      "path": "robin/roles/10-data-analyst.md",
+      "bytes": 1010,
+      "sha256": "caf03d114b247fdf173444fe270828597c9cd1235462fbe673c1eb872b2f76b2"
+    },
+    {
+      "path": "robin/roles/11-analysis-comparison.md",
+      "bytes": 1203,
+      "sha256": "ae3ec6561c28e21f14d204b115811c2ec941f72f4fa46c7433a7088bb091647e"
+    },
+    {
+      "path": "robin/roles/12-data-interpreter.md",
+      "bytes": 898,
+      "sha256": "2bc4b588524812a433f5b611a3f0db26a8e264e488fccae738331960c98176e6"
+    },
+    {
+      "path": "robin/roles/13-followup-planner.md",
+      "bytes": 890,
+      "sha256": "5aa68f4ef9d6a2066da62e89fb68fb3b24ac5a07e8440c80209dceb75055d502"
+    },
+    {
+      "path": "robin/roles/14-report-formatter.md",
+      "bytes": 836,
+      "sha256": "52b1bfd165871422519067d2b776ae7ba1178c94b138b09849ca82cc7afc59fb"
+    },
+    {
+      "path": "robin/roles/15-notebook-method.md",
+      "bytes": 537,
+      "sha256": "a4205b8c81d49c0f1241988b7df4d57a4488baabd754cbda867effa28c42f68b"
+    },
+    {
+      "path": "robin/roles.md",
+      "bytes": 5486,
+      "sha256": "9e62efa3ca25696726d3cabfd55d22e0dfbb5e31751bfe99783f4789bb94bb50"
+    },
+    {
+      "path": "robin/source/analyses.py",
+      "bytes": 6840,
+      "sha256": "ec527ba1d4f8d8618f7fec965669ba1f2e70a0b78de927e38e5b53c1b2ce7595"
+    },
+    {
+      "path": "robin/source/assays.py",
+      "bytes": 9992,
+      "sha256": "9d6ff182e2650548d7fcdb2bdecd17b1faf2a1a303fa0812fc46fba3ddd306da"
+    },
+    {
+      "path": "robin/source/candidates.py",
+      "bytes": 21121,
+      "sha256": "9f7fdee6e90d66b9e4012b1c6c86ce9e15c8335ce78ad2223313e62f65a9c75f"
+    },
+    {
+      "path": "robin/source/configuration.py",
+      "bytes": 13241,
+      "sha256": "1fe9290070ce6a1cdf607710357c782001aa7bd26a6377f58d1f8d019e3a26e2"
+    },
+    {
+      "path": "robin/source/multitrajectory_runner.py",
+      "bytes": 11934,
+      "sha256": "b01bfca5965ca1f26a98c0521512d7fd5b53216ea8b8659184fb5ca11d022895"
+    },
+    {
+      "path": "robin/source/prompts.py",
+      "bytes": 49382,
+      "sha256": "d4c3db3be3e95d5bf7af05df61126861b1834dbe0499331c54902d8e234cd728"
+    },
+    {
+      "path": "robin/source/utils.py",
+      "bytes": 35732,
+      "sha256": "a5ff5fe0cb6a5e2f880982595dde49c74f3ec9ffbe521af663500e351cbad227"
+    },
+    {
+      "path": "robin-components/extract_finch.py",
+      "bytes": 3777,
+      "sha256": "83287e4ae05b1114bc5ad07a04fb9c45fee5fded5c51257912e4248666dee321"
+    },
+    {
+      "path": "robin-components/manifest.json",
+      "bytes": 10013,
+      "sha256": "5694d819ba2291fbdd8229118872737ac30b89ac63f015ce8aeea247fc6b1461"
+    },
+    {
+      "path": "robin-components/original/LICENSE",
+      "bytes": 11308,
+      "sha256": "68ff053b1f1a393ef7f9f8664973a8055da8e98d172fd332592955ee06afd9b8"
+    },
+    {
+      "path": "robin-components/original/README.md",
+      "bytes": 3606,
+      "sha256": "deacbed37dd1045cbde25ff1f8a57b8d0121a5df62dfab6f3a69719cce5c9c04"
+    },
+    {
+      "path": "robin-components/original/src/fhda/data_analysis_env.py",
+      "bytes": 6232,
+      "sha256": "11895b03d6ab7a892040ce3f95b6881b659aa7e53c93a23d4dc23310946e370d"
+    },
+    {
+      "path": "robin-components/original/src/fhda/dataset.py",
+      "bytes": 6133,
+      "sha256": "1f81ca672ba11e798e23742817e547d3cb888a3f16be68619bb2daf1dec165c7"
+    },
+    {
+      "path": "robin-components/original/src/fhda/notebook_env.py",
+      "bytes": 15450,
+      "sha256": "edf3701848f12651822aaeb9926e57447bc0cda994068a256c17e2e32d2cb77f"
+    },
+    {
+      "path": "robin-components/original/src/fhda/prompts.py",
+      "bytes": 10989,
+      "sha256": "0b366c5b2a324e5b4396764a2ecc3ad9ce55b24513d9a36a6b34eb466964ccfe"
+    },
+    {
+      "path": "robin-components/prompts/AVOID_IMAGES.md",
+      "bytes": 548,
+      "sha256": "7c7f84bcead37dddf052f5f94f57aa10b5e16ae01940405ce8dd447c7a6cabbc"
+    },
+    {
+      "path": "robin-components/prompts/BASH_TOOL_USAGE.md",
+      "bytes": 1486,
+      "sha256": "618126ac48326a9b8e53528ab521e2ef706fd4517d984279f97936d901659625"
+    },
+    {
+      "path": "robin-components/prompts/CAPSULE_SYSTEM_PROMPT_HYPOTHESIS.md",
+      "bytes": 719,
+      "sha256": "772e775025d677d35ac2acda975d0ca181fd5deadfdfc37a5545edf4bf7d87a7"
+    },
+    {
+      "path": "robin-components/prompts/CAPSULE_SYSTEM_PROMPT_MCQ.md",
+      "bytes": 877,
+      "sha256": "c917dae640207c06c21b178cec35ff3b4042139564f0a2c29130fe1e1aa17962"
+    },
+    {
+      "path": "robin-components/prompts/CAPSULE_SYSTEM_PROMPT_OPEN.md",
+      "bytes": 870,
+      "sha256": "fa3980d68f77199965eb50b55231ea41ee212b14144e34cebb68a28c5e1a1764"
+    },
+    {
+      "path": "robin-components/prompts/CAPSULE_SYSTEM_PROMPT_QUERY.md",
+      "bytes": 941,
+      "sha256": "801d22fa340824835d657975fd5c942d2c76a29bd880635951ae1e2c34c8b3a2"
+    },
+    {
+      "path": "robin-components/prompts/CHAIN_OF_THOUGHT_AGNOSTIC.md",
+      "bytes": 3228,
+      "sha256": "adb323d0a745a24ab2ab3f41869d19b245aaab3360aa0c2853ea2adc499c9d87"
+    },
+    {
+      "path": "robin-components/prompts/CONTINUATION_PROMPT_TEMPLATE.md",
+      "bytes": 2119,
+      "sha256": "be36aa85a5a1ccb983291005c4907723a568009b69a428951f4f8212eaf54b23"
+    },
+    {
+      "path": "robin-components/prompts/GENERAL_NOTEBOOK_GUIDELINES.md",
+      "bytes": 1195,
+      "sha256": "e24deb731262f2da74381cd5c81b59fc23fea21bb6c400402d40ce5622a8bf73"
+    },
+    {
+      "path": "robin-components/prompts/HYPOTHESIS_PROMPT_TEMPLATE.md",
+      "bytes": 5479,
+      "sha256": "18376ff6e859066fdcb3a603b0dbfa97d23a8d4fe9e3809ef48cf8bf47b32573"
+    },
+    {
+      "path": "robin-components/prompts/MCQ_PROMPT_TEMPLATE.md",
+      "bytes": 5696,
+      "sha256": "f87d67b8458a143b79c33137ee315e453fac3f9b54d4878140573b1421fbd94e"
+    },
+    {
+      "path": "robin-components/prompts/OPEN_PROMPT_TEMPLATE.md",
+      "bytes": 5615,
+      "sha256": "28f5fc47d7c308a1807d137b80962e88d3ae283ac23b45f78b9b4e09e4579fde"
+    },
+    {
+      "path": "robin-components/prompts/R_SPECIFIC_GUIDELINES.md",
+      "bytes": 1684,
+      "sha256": "e5d05dc6a4d06420c95c5526363bf833ddd8128167dadfadb553af1424859af5"
+    },
+    {
+      "path": "robin-components/prompts/SUBMIT_ANSWER_HYPOTHESIS.md",
+      "bytes": 708,
+      "sha256": "bd04cfbf510d8a2d20ef2eba71f9cd919bd16865b8656bf7badbfd157b2df4a1"
+    },
+    {
+      "path": "robin-components/prompts/SUBMIT_ANSWER_MCQ.md",
+      "bytes": 935,
+      "sha256": "b158c8e2f54652f564903d65b429221a802755e2fb6a23c6a816f56afcba8b84"
+    },
+    {
+      "path": "robin-components/prompts/SUBMIT_ANSWER_OPEN.md",
+      "bytes": 853,
+      "sha256": "eca99da837251245561c161094e2727d5ea3ba7b159add7e364e63af60e78973"
+    },
+    {
+      "path": "robin-components/prompts/SUBMIT_ANSWER_SINGLE.md",
+      "bytes": 844,
+      "sha256": "0ea9bdfa39154478e8d3c69b2cfc79f72253b11205c987ce059f0abfacd2d4ac"
+    },
+    {
+      "path": "robin-components/README.md",
+      "bytes": 8445,
+      "sha256": "5da3f46c3408681d16439d23c62d8ca2a9275a573eb6568f9e13ec5826db5fe1"
+    },
+    {
+      "path": "verify_extractions.py",
+      "bytes": 2476,
+      "sha256": "42028faa6c7df2e3d942db471ad734fe20d0128b5337750f82a1caa5d446b080"
+    }
+  ]
+}
