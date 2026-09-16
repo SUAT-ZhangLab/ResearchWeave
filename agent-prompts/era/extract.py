@@ -1,5 +1,5 @@
 """Extract ERA role/task text from a pinned Git commit without running it.
-Adapted for ZhangLuo; not an upstream ERA file.
+Adapted for ResearchWeave; not an upstream ERA file.
 Run: python agent-prompts/era/extract.py
 """
 from __future__ import annotations
