@@ -1,0 +1,253 @@
+{
+  "project": "Future-House/finch (public standalone source)",
+  "commit": "aea66fdf2dd2be827727de50a73cae60dff59972",
+  "retrieved": "2026-09-15",
+  "license": "Apache-2.0",
+  "scope": "Public Finch prompt constants only; not a recovery of hosted Edison system prompts.",
+  "extraction": "Static AST string evaluation; source files were not imported or executed; source originals retained byte-for-byte as downloaded.",
+  "prompt_count": 17,
+  "prompts": [
+    {
+      "name": "CAPSULE_SYSTEM_PROMPT_HYPOTHESIS",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        2,
+        6
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L2-L6",
+      "output": "prompts/CAPSULE_SYSTEM_PROMPT_HYPOTHESIS.md",
+      "string_sha256": "9d445461738349ac2077ee16f08681f144ba79c7a7d0ce1022b42dfb3ccba62d",
+      "characters": 240
+    },
+    {
+      "name": "CAPSULE_SYSTEM_PROMPT_MCQ",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        8,
+        12
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L8-L12",
+      "output": "prompts/CAPSULE_SYSTEM_PROMPT_MCQ.md",
+      "string_sha256": "6f5358a1d9c233ab1e648b810380c8dee4552eef30fe80b7641a173e162dcfcc",
+      "characters": 403
+    },
+    {
+      "name": "CAPSULE_SYSTEM_PROMPT_OPEN",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        14,
+        18
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L14-L18",
+      "output": "prompts/CAPSULE_SYSTEM_PROMPT_OPEN.md",
+      "string_sha256": "c82bd5cca7c0aa1561ed3cc52c6c2c7ca9a40c17078047946c988dcb39f70df7",
+      "characters": 393
+    },
+    {
+      "name": "CAPSULE_SYSTEM_PROMPT_QUERY",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        20,
+        25
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L20-L25",
+      "output": "prompts/CAPSULE_SYSTEM_PROMPT_QUERY.md",
+      "string_sha256": "29af20e23874870833b04a495d78273005d34596576f0bfcbaaaa2acee1f9b4d",
+      "characters": 463
+    },
+    {
+      "name": "R_SPECIFIC_GUIDELINES",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        28,
+        58
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L28-L58",
+      "output": "prompts/R_SPECIFIC_GUIDELINES.md",
+      "string_sha256": "f898fd0c299461eab7943ad825161ce2aef3c20762679a5a74ab208e2605531a",
+      "characters": 1212
+    },
+    {
+      "name": "GENERAL_NOTEBOOK_GUIDELINES",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        62,
+        73
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L62-L73",
+      "output": "prompts/GENERAL_NOTEBOOK_GUIDELINES.md",
+      "string_sha256": "8dae8763f8943f38aaf64727629372272966b8aec6e921f1a4df79d096876bcc",
+      "characters": 717
+    },
+    {
+      "name": "AVOID_IMAGES",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        76,
+        78
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L76-L78",
+      "output": "prompts/AVOID_IMAGES.md",
+      "string_sha256": "dfcf982bcbe263ff556147056ceeead0928dede43b29e67d0af9230d81336139",
+      "characters": 85
+    },
+    {
+      "name": "BASH_TOOL_USAGE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        80,
+        110
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L80-L110",
+      "output": "prompts/BASH_TOOL_USAGE.md",
+      "string_sha256": "1552ddc49453608ce0383b3da12467118dceb0f077c61940eb15290308fc5ea1",
+      "characters": 1018
+    },
+    {
+      "name": "CHAIN_OF_THOUGHT_AGNOSTIC",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        113,
+        163
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L113-L163",
+      "output": "prompts/CHAIN_OF_THOUGHT_AGNOSTIC.md",
+      "string_sha256": "8cdd1dd12f8af893765d0851b1b2a72210d7ba200c898b420d6f6364253b690e",
+      "characters": 2748
+    },
+    {
+      "name": "SUBMIT_ANSWER_HYPOTHESIS",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        165,
+        168
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L165-L168",
+      "output": "prompts/SUBMIT_ANSWER_HYPOTHESIS.md",
+      "string_sha256": "919ca5a295623b2efa5818be88a3321291d37959390027134ae94ba73d802903",
+      "characters": 229
+    },
+    {
+      "name": "SUBMIT_ANSWER_SINGLE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        169,
+        177
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L169-L177",
+      "output": "prompts/SUBMIT_ANSWER_SINGLE.md",
+      "string_sha256": "cc7bfef2dda6f06c008f277f14727f21d41e73f041aa05763404c5a9563a8d80",
+      "characters": 369
+    },
+    {
+      "name": "SUBMIT_ANSWER_OPEN",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        178,
+        186
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L178-L186",
+      "output": "prompts/SUBMIT_ANSWER_OPEN.md",
+      "string_sha256": "3e5414789b62a9dd72338e570833c63fb4bae5a5dcbd48fa2d45123c51745dab",
+      "characters": 380
+    },
+    {
+      "name": "SUBMIT_ANSWER_MCQ",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        187,
+        195
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L187-L195",
+      "output": "prompts/SUBMIT_ANSWER_MCQ.md",
+      "string_sha256": "91e765c465212a3557ec498e28b42cfb27e14c79627890f12bd3b53fd8d7024d",
+      "characters": 463
+    },
+    {
+      "name": "HYPOTHESIS_PROMPT_TEMPLATE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        197,
+        209
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L197-L209",
+      "output": "prompts/HYPOTHESIS_PROMPT_TEMPLATE.md",
+      "string_sha256": "660f26db7aaef63b761f84b4942d797ab48e7b7b04b958a1c5d0739ae599a83f",
+      "characters": 4998
+    },
+    {
+      "name": "MCQ_PROMPT_TEMPLATE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        211,
+        221
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L211-L221",
+      "output": "prompts/MCQ_PROMPT_TEMPLATE.md",
+      "string_sha256": "7f3611da94d5ffa060f8b9b7d511f25e8de9390bab7274aa13466db486cffdfd",
+      "characters": 5222
+    },
+    {
+      "name": "OPEN_PROMPT_TEMPLATE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        223,
+        234
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L223-L234",
+      "output": "prompts/OPEN_PROMPT_TEMPLATE.md",
+      "string_sha256": "9d0d8a18a829ce8f42ead6bf6966b9836ed31dcf60b74d3821fa6e937146b35b",
+      "characters": 5140
+    },
+    {
+      "name": "CONTINUATION_PROMPT_TEMPLATE",
+      "source_file": "src/fhda/prompts.py",
+      "source_lines": [
+        236,
+        259
+      ],
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py#L236-L259",
+      "output": "prompts/CONTINUATION_PROMPT_TEMPLATE.md",
+      "string_sha256": "ee0b3dfdbb4be0b4863afe6d0a944ba37ad24a01a2abbcac46559033e8642f79",
+      "characters": 1636
+    }
+  ],
+  "original_files": [
+    {
+      "source_file": "LICENSE",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/LICENSE",
+      "sha256": "68ff053b1f1a393ef7f9f8664973a8055da8e98d172fd332592955ee06afd9b8",
+      "bytes": 11308
+    },
+    {
+      "source_file": "README.md",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/README.md",
+      "sha256": "deacbed37dd1045cbde25ff1f8a57b8d0121a5df62dfab6f3a69719cce5c9c04",
+      "bytes": 3606
+    },
+    {
+      "source_file": "src/fhda/data_analysis_env.py",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/data_analysis_env.py",
+      "sha256": "11895b03d6ab7a892040ce3f95b6881b659aa7e53c93a23d4dc23310946e370d",
+      "bytes": 6232
+    },
+    {
+      "source_file": "src/fhda/dataset.py",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/dataset.py",
+      "sha256": "1f81ca672ba11e798e23742817e547d3cb888a3f16be68619bb2daf1dec165c7",
+      "bytes": 6133
+    },
+    {
+      "source_file": "src/fhda/notebook_env.py",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/notebook_env.py",
+      "sha256": "edf3701848f12651822aaeb9926e57447bc0cda994068a256c17e2e32d2cb77f",
+      "bytes": 15450
+    },
+    {
+      "source_file": "src/fhda/prompts.py",
+      "source_url": "https://github.com/Future-House/finch/blob/aea66fdf2dd2be827727de50a73cae60dff59972/src/fhda/prompts.py",
+      "sha256": "0b366c5b2a324e5b4396764a2ecc3ad9ce55b24513d9a36a6b34eb466964ccfe",
+      "bytes": 10989
+    }
+  ]
+}
