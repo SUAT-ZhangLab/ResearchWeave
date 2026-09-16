@@ -11,10 +11,18 @@ import research as sa
 
 class ResearchTests(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(prefix="zhangluo-records-")
+        self.temp = tempfile.TemporaryDirectory(prefix="researchweave-records-")
         self.root = Path(self.temp.name)
         self.study = self.root / "study"
         sa.initialize(argparse.Namespace(study=str(self.study), question="Synthetic calibration", label="synthetic"))
+
+    def test_previous_name_study_remains_readable(self):
+        meta = sa.read_json(self.study / "study.json")
+        self.assertEqual(meta["format"], "researchweave.study.v1")
+        meta["format"] = "zhangluo.study.v1"
+        sa.atomic_json(self.study / "study.json", meta)
+        self.assertEqual(sa.study_path(self.study), self.study.resolve())
+        self.assertEqual(sa.status(argparse.Namespace(study=str(self.study)))["counts"], {})
 
     def tearDown(self):
         self.temp.cleanup()

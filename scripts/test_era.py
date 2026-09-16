@@ -1,7 +1,7 @@
 """Meaningful checks for stepwise ERA persistence, scoring, and Docker execution.
 
-Run ordinary checks with unittest. Set ZHANGLUO_DOCKER_TESTS=1 to include
-an actual WSL Docker run using the installed zhangluo-era image.
+Run ordinary checks with unittest. Set RESEARCHWEAVE_DOCKER_TESTS=1 to include
+an actual WSL Docker run using the installed researchweave-era image.
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ def result(score=0.0, output=None, error=None):
 
 class SessionTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="zhangluo-era-tests-")
+        self.temporary = tempfile.TemporaryDirectory(prefix="researchweave-era-tests-")
         self.root = Path(self.temporary.name)
         self.session = self.root / "session"
         self.spec_path = self.root / "input.json"
@@ -242,10 +242,10 @@ class SessionTests(unittest.TestCase):
                     era._validate_spec({**self.spec, key: value})
 
 
-@unittest.skipUnless(os.environ.get("ZHANGLUO_DOCKER_TESTS") == "1", "set ZHANGLUO_DOCKER_TESTS=1 for actual Docker execution")
+@unittest.skipUnless(os.environ.get("RESEARCHWEAVE_DOCKER_TESTS") == "1", "set RESEARCHWEAVE_DOCKER_TESTS=1 for actual Docker execution")
 class DockerIntegrationTest(unittest.TestCase):
     def test_complete_stepwise_run_in_actual_docker(self):
-        with tempfile.TemporaryDirectory(prefix="zhangluo-era-docker-") as directory:
+        with tempfile.TemporaryDirectory(prefix="researchweave-era-docker-") as directory:
             root = Path(directory)
             spec = root / "spec.json"
             baseline = root / "baseline.py"

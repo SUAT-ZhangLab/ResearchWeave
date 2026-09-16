@@ -76,7 +76,7 @@ class DockerSandbox:
     def __init__(
         self,
         timeout_seconds: float = 60,
-        image: str = "zhangluo-runner:0.1.0",
+        image: str = "researchweave-runner:0.1.0",
         distribution: str = "Ubuntu-22.04",
     ) -> None:
         self.timeout_seconds = self._timeout(timeout_seconds)
@@ -87,7 +87,7 @@ class DockerSandbox:
         if not isinstance(distribution, str) or not distribution or "\x00" in distribution:
             raise ValueError("Invalid WSL distribution name")
         self.image = image
-        self.distribution = os.environ.get("ZHANGLUO_WSL_DISTRO", distribution)
+        self.distribution = os.environ.get("RESEARCHWEAVE_WSL_DISTRO", distribution)
         self.last_error: str | None = None
 
     @staticmethod
@@ -98,9 +98,9 @@ class DockerSandbox:
         return seconds
 
     def _command(self, docker_arguments: list[str]) -> list[str]:
-        mode = os.environ.get("ZHANGLUO_DOCKER_MODE", "auto")
+        mode = os.environ.get("RESEARCHWEAVE_DOCKER_MODE", "auto")
         if mode not in {"auto", "native", "wsl"}:
-            raise ValueError("ZHANGLUO_DOCKER_MODE must be auto, native, or wsl")
+            raise ValueError("RESEARCHWEAVE_DOCKER_MODE must be auto, native, or wsl")
         if mode == "native" or (mode == "auto" and shutil.which("docker")):
             return ["docker", *docker_arguments]
         if mode == "auto" and os.name != "nt":
@@ -110,7 +110,7 @@ class DockerSandbox:
             "wsl.exe", "-d", self.distribution, "-u", "root", "--cd", "/",
             "--exec", "sh", "-c",
             'systemctl start docker && exec docker "$@"',
-            "zhangluo", *docker_arguments,
+            "researchweave", *docker_arguments,
         ]
 
     def _remove_container(self, name: str) -> bool:
@@ -243,7 +243,7 @@ class DockerSandbox:
             self.last_error = "invalid_input"
             return None, False
 
-        name = "zhangluo-runner-" + uuid.uuid4().hex
+        name = "researchweave-runner-" + uuid.uuid4().hex
         command = self._command([
             "run", "--rm", "--pull", "never", "--log-driver", "none", "--interactive", "--name", name,
             "--network", "none", "--read-only", "--cap-drop", "ALL",

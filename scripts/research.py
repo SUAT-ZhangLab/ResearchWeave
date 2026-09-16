@@ -1,4 +1,4 @@
-"""Small persistent research workspace for the Codex ZhangLuo skill.
+"""Small persistent research workspace for the Codex ResearchWeave skill.
 
 Uses immutable JSON records and actual Docker execution. Model decisions and
 literature retrieval are performed in the calling Codex conversation.
@@ -67,7 +67,7 @@ def study_lock(study):
 def study_path(value):
     study = Path(value).expanduser().resolve()
     meta = read_json(study / "study.json")
-    if meta.get("format") != "zhangluo.study.v1":
+    if meta.get("format") not in {"researchweave.study.v1", "zhangluo.study.v1"}:
         raise ValueError("Unsupported study format")
     return study
 
@@ -155,7 +155,7 @@ def initialize(args):
         (study / "records").mkdir(exist_ok=True)
         (study / "artifacts").mkdir(exist_ok=True)
         (study / "work").mkdir(exist_ok=True)
-        value = {"format": "zhangluo.study.v1", "id": "study-" + uuid.uuid4().hex,
+        value = {"format": "researchweave.study.v1", "id": "study-" + uuid.uuid4().hex,
                  "question": args.question, "label": args.label, "created_at": now(),
                  "model_execution": "calling Codex conversation"}
         atomic_json(study / "study.json", value)

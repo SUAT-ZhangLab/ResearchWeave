@@ -9,14 +9,14 @@ import unittest
 from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('zhangluo_installer', ROOT/'install.py')
+spec=importlib.util.spec_from_file_location('researchweave_installer', ROOT/'install.py')
 installer=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(installer)
 
 class InstallTests(unittest.TestCase):
     def test_self_contained_install_and_repeat(self):
-        with tempfile.TemporaryDirectory(prefix='zhangluo-') as temp:
-            dest=Path(temp)/'another agent space'/ 'zhangluo'
+        with tempfile.TemporaryDirectory(prefix='researchweave-') as temp:
+            dest=Path(temp)/'another agent space'/ 'researchweave'
             result=installer.install(dest)
             self.assertTrue(result['doctor']['success'])
             self.assertEqual(result['doctor']['project'],str(dest.resolve()))
@@ -32,19 +32,19 @@ class InstallTests(unittest.TestCase):
                 installer.install(destination)
 
     def test_default_locations(self):
-        self.assertEqual(installer.default_destination('codex'),Path.home()/'.agents/skills/zhangluo')
-        self.assertEqual(installer.default_destination('claude'),Path.home()/'.claude/skills/zhangluo')
+        self.assertEqual(installer.default_destination('codex'),Path.home()/'.agents/skills/researchweave')
+        self.assertEqual(installer.default_destination('claude'),Path.home()/'.claude/skills/researchweave')
 
     def test_container_command_modes(self):
         import era_sandbox
         import os
-        with patch.dict(os.environ,{'ZHANGLUO_DOCKER_MODE':'native'}):
+        with patch.dict(os.environ,{'RESEARCHWEAVE_DOCKER_MODE':'native'}):
             self.assertEqual(era_sandbox.DockerSandbox()._command(['version']),['docker','version'])
-        with patch.dict(os.environ,{'ZHANGLUO_DOCKER_MODE':'wsl','ZHANGLUO_WSL_DISTRO':'CustomDistro'}):
+        with patch.dict(os.environ,{'RESEARCHWEAVE_DOCKER_MODE':'wsl','RESEARCHWEAVE_WSL_DISTRO':'CustomDistro'}):
             command=era_sandbox.DockerSandbox()._command(['version'])
             self.assertEqual(command[0],'wsl.exe')
             self.assertEqual(command[2],'CustomDistro')
-        with patch.dict(os.environ,{'ZHANGLUO_DOCKER_MODE':'auto'}), patch.object(era_sandbox.shutil,'which',return_value='/usr/bin/docker'):
+        with patch.dict(os.environ,{'RESEARCHWEAVE_DOCKER_MODE':'auto'}), patch.object(era_sandbox.shutil,'which',return_value='/usr/bin/docker'):
             self.assertEqual(era_sandbox.DockerSandbox()._command(['version']),['docker','version'])
 
 if __name__=='__main__':
