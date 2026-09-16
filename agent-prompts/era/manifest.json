@@ -1,0 +1,129 @@
+{
+  "description": "Published ERA role and task prompts extracted from pinned upstream source; not a reconstruction of an unreleased system.",
+  "repository": "https://github.com/google-research/era",
+  "commit": "b836730b5c000526af95116b1d0e2c60c8cf0a10",
+  "extracted_on": "2026-09-15",
+  "upstream_license": "Apache-2.0",
+  "attribution": "Google Research ERA; Copyright 2026 Google LLC. where present in source headers.",
+  "license_file": {
+    "file": "original/LICENSE",
+    "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+  },
+  "count": 6,
+  "items": [
+    {
+      "file": "original/01-gemini-role-template.md",
+      "kind": "python_f_string_body",
+      "source_file": "implementation/llm.py",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/llm.py",
+      "source_sha256": "6a344ab43e747669d487bf051856ca6cf4fd7af41b46e652bf1f63df418d9c16",
+      "location": {
+        "assignment": "full_prompt",
+        "start_line": 17,
+        "end_line": 25
+      },
+      "sha256": "473cc2bf871e213d9d69636a3b02e3ef2b639f307f40d4937c8c3bb50d8b79ae",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "source_literal": "f\"\"\"\nYou are an expert Data Scientist and Python programmer.\nYour task is to write Python code to solve a machine learning problem.\nReturn ONLY the python code.\n\n--- BEGIN PROMPT ---\n{prompt}\n--- END PROMPT ---\n\"\"\"",
+      "transformation": "Removed only the Python string prefix and triple-quote delimiters; placeholders are not evaluated."
+    },
+    {
+      "file": "original/02-program-improvement-template.md",
+      "kind": "python_f_string_body",
+      "source_file": "implementation/playground_s3e1.py",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/playground_s3e1.py",
+      "source_sha256": "e20beec8279a042350fa30b78857e9a5f0ad6807d17f0ff2db265f826e3e04fa",
+      "location": {
+        "assignment": "prompt",
+        "start_line": 76,
+        "end_line": 123
+      },
+      "sha256": "fbc0eb883a4464cbf5ef07a0313a791561bdda943aed54f86b238ff7f7acc7c8",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "source_literal": "f\"\"\"\n{problem.description}\n\nHere is a preview of the training data:\n{data_preview}\n\nThe goal is to predict 'MedHouseVal'. The metric is RMSE (Root Mean Squared Error).\nLower is better.\n\nThe previous solution had a score (RMSE) of: {rmse:.5f}\nPrevious Solution Code:\n```python\n{parent_solution.program}\n```\n\nPlease generate a NEW, IMPROVED Python function named `train_and_predict` that:\n1. Accepts `train_path` and `test_path` as strings.\n2. Trains a regression model.\n3. Returns the predictions for the test set as a numpy array or list.\n4. You can use pandas, numpy, scikit-learn.\n\nIMPORTANT: DO NOT use `xgboost` or `lightgbm`.\n\nYour code must look like this:\n```python\nimport pandas as pd\nimport numpy as np\n# ... other imports\n\ndef train_and_predict(train_path, test_path):\n    # Load data\n    train = pd.read_csv(train_path)\n    test = pd.read_csv(test_path)\n    \n    # ... Feature Engineering ...\n    # ... Training ...\n    \n    # Predict\n    predictions = ... \n    return predictions\n```\nProvide the full, runnable code including imports.\n\nIMPORTANT CONSTRAINTS FOR SPEED:\n1. DO NOT use GridSearchCV or RandomizedSearchCV.\n2. If using RandomForest or Boosting, set `n_estimators` to maximum 50.\n3. Keep the model lightweight (execution time limit is 60 seconds).\n\"\"\"",
+      "transformation": "Removed only the Python string prefix and triple-quote delimiters; placeholders are not evaluated."
+    },
+    {
+      "file": "original/03-single-cell-overview.md",
+      "kind": "notebook_task_definition",
+      "source_file": "implementation/notebooks/single_cell_batch_integration.ipynb",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/notebooks/single_cell_batch_integration.ipynb",
+      "source_sha256": "825075a471157b8af9edb16bbb30668b9bca20f5c2bac57f7a65a5255c2acec5",
+      "location": {
+        "cell_index_zero_based": 0,
+        "cell_number_one_based": 1,
+        "cell_type": "markdown",
+        "cell_id": "4257f614"
+      },
+      "sha256": "1bb68342b71fa572013916eabd9d73826c06ff223cd99c33d24db58ea71a976b",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "transformation": "Decoded notebook JSON and concatenated this cell's source strings; cell content is unchanged."
+    },
+    {
+      "file": "original/04-single-cell-task.md",
+      "kind": "notebook_task_definition",
+      "source_file": "implementation/notebooks/single_cell_batch_integration.ipynb",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/notebooks/single_cell_batch_integration.ipynb",
+      "source_sha256": "825075a471157b8af9edb16bbb30668b9bca20f5c2bac57f7a65a5255c2acec5",
+      "location": {
+        "cell_index_zero_based": 1,
+        "cell_number_one_based": 2,
+        "cell_type": "markdown",
+        "cell_id": "0c1ccaa8"
+      },
+      "sha256": "956a9ca90538c2bd9bda68029417bc1b9fe5406672dca14ab4af65995fca3b07",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "transformation": "Decoded notebook JSON and concatenated this cell's source strings; cell content is unchanged."
+    },
+    {
+      "file": "original/05-flu-overview.md",
+      "kind": "notebook_task_definition",
+      "source_file": "implementation/notebooks/flu-cornell-jhu-hierarchsir.ipynb",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/notebooks/flu-cornell-jhu-hierarchsir.ipynb",
+      "source_sha256": "ca004910fa5bff4dde3349ac6384a7e1a963a83279573253e61bf20ddbfe3099",
+      "location": {
+        "cell_index_zero_based": 0,
+        "cell_number_one_based": 1,
+        "cell_type": "markdown",
+        "cell_id": null
+      },
+      "sha256": "9c865276a5b47c11d541864597ba3b7242cfc994669f60205e6d6293dcea811f",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "transformation": "Decoded notebook JSON and concatenated this cell's source strings; cell content is unchanged."
+    },
+    {
+      "file": "original/06-flu-task.md",
+      "kind": "notebook_task_definition",
+      "source_file": "implementation/notebooks/flu-cornell-jhu-hierarchsir.ipynb",
+      "source_url": "https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/notebooks/flu-cornell-jhu-hierarchsir.ipynb",
+      "source_sha256": "ca004910fa5bff4dde3349ac6384a7e1a963a83279573253e61bf20ddbfe3099",
+      "location": {
+        "cell_index_zero_based": 1,
+        "cell_number_one_based": 2,
+        "cell_type": "markdown",
+        "cell_id": null
+      },
+      "sha256": "09cabd0d91a550563c346f77807f2b275d6bbbc273081bba88687b9e3d3c8feb",
+      "encoding": "UTF-8",
+      "license": "Apache-2.0",
+      "transformation": "Decoded notebook JSON and concatenated this cell's source strings; cell content is unchanged."
+    }
+  ],
+  "excluded": [
+    "Notebook outputs and model-generated candidate programs",
+    "Initial baseline programs, execution setup code and score implementation",
+    "Notebook cells marked [exclude_from_prompt]",
+    "Application papers in era_applications/pdfs (not extracted as software role definitions)"
+  ],
+  "notes": [
+    "The two f-string bodies are unexpanded source templates, not captured API requests.",
+    "Notebook task definitions are published task context; the repository does not establish a complete serialized model request for these benchmark notebooks.",
+    "The English task text is copied as published, including spelling, notation and scientific claims; extraction does not verify those claims.",
+    "roles.md and this extraction script are new explanatory files, not upstream role MD files."
+  ]
+}
