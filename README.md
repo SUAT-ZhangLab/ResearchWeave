@@ -18,7 +18,7 @@ Give your agent this message:
 
 ## What can I use ResearchWeave for?
 
-ResearchWeave supports the following types of research problems. Each category includes a concrete, hypothetical project example. Sample counts, filenames, and preliminary observations are illustrative; they are not results from Zhang Lab or benchmarks of the system. Each example includes a concrete question, materials to provide, and a prompt you can adapt. Literature searches and analyses use the tools available to your host agent; specialized analyses need an appropriate analysis environment.
+ResearchWeave supports the following types of research problems. Each category includes a concrete, hypothetical project example. Sample counts, filenames, and preliminary observations are illustrative; they are not results from Zhang Lab or benchmarks of the system. Each example includes a concrete question, materials to provide, and a prompt you can adapt. The accompanying citations provide scientific or methodological background for the examples. Literature searches and analyses use the tools available to your host agent; specialized analyses need an appropriate analysis environment.
 
 ### 1. Literature review and evidence synthesis
 
@@ -34,6 +34,8 @@ Compare published findings, assess how well they apply to your project, and iden
 
 **Expected output:** A source-linked comparison table, a justified shortlist, and a focused experiment plan showing what observations would support selecting a formulation.
 
+**Research background:** A useful starting paper reports LNP-mediated CAR mRNA delivery to primary human T cells and measures protein expression and cell function ([Billingsley et al., 2020](https://doi.org/10.1021/acs.nanolett.9b04246)). Its experimental conditions should be compared with the resting-cell goal in this example.
+
 ### 2. Research data analysis and interpretation
 
 Turn research data into a justified comparison, executed analyses, and conclusions that account for the study design.
@@ -47,6 +49,8 @@ Turn research data into a justified comparison, executed analyses, and conclusio
 > Use ResearchWeave to compare pretreatment and post-treatment T cells in this dataset. First check patient pairing, cell annotations, and batch structure. Analyze changes in cell abundance separately from changes in gene expression, using patients as the independent biological units. Assess the response-associated change with a suitable paired analysis, examine whether one patient drives the result, and distinguish association from a causal treatment mechanism. Run the analysis in the configured single-cell environment and save the code, figures, and report.
 
 **Expected output:** A documented sample assessment, patient-level comparisons, reproducible figures, and a report stating which interpretation the data support and which would need further evidence.
+
+**Methodological background:** Single-cell differential-expression comparisons need to account for variation between biological replicates; treating individual cells as independent replicates can produce false discoveries ([Squair et al., 2021](https://doi.org/10.1038/s41467-021-25960-2)).
 
 ### 3. Hypothesis development and experimental troubleshooting
 
@@ -62,6 +66,8 @@ Explain unexpected or conflicting observations by comparing testable hypotheses 
 
 **Expected output:** A joint assessment of both assays, a small set of competing explanations, and a follow-up plan tied to a clear decision.
 
+**Methodological background:** Endpoint drug-response measurements can be influenced by cell division rate and assay duration, which makes assay design relevant when interpreting an apparent lack of response ([Hafner et al., 2016](https://doi.org/10.1038/nmeth.3853)).
+
 ### 4. Candidate prioritization and experiment design
 
 Decide which target, intervention, or research direction to pursue first, then design experiments that address the deciding uncertainties.
@@ -76,6 +82,8 @@ Decide which target, intervention, or research direction to pursue first, then d
 
 **Expected output:** A candidate comparison with linked evidence, a reasoned first choice if the evidence permits one, and a follow-up plan that can distinguish target-specific activity from general fitness effects.
 
+**Methodological background:** The drugZ study describes treated-versus-control CRISPR-screen analysis for identifying genetic changes that enhance or suppress drug activity ([Colic et al., 2019](https://doi.org/10.1186/s13073-019-0665-3)). It provides a relevant analysis reference for this example.
+
 ### 5. Analysis code and predictive model improvement
 
 Compare alternative programs against a defined evaluation task, using execution results to guide improvements.
@@ -89,6 +97,8 @@ Compare alternative programs against a defined evaluation task, using execution 
 > Use ResearchWeave's ERA workflow to improve this prediction function. Preserve the supplied batch-aware development splits, fit preprocessing only on the training portion, and compare candidates with RMSE. Evaluate the baseline first and try at most eight candidate programs. Keep the final test batch out of development, then evaluate the selected candidate once. Record execution failures as well as scores, and explain whether any improvement is large enough to be useful for choosing variants to measure next.
 
 **Expected output:** Executed candidate programs, a comparison against the baseline, saved search history, and a final test result. This example requires the Docker runner and a compact function-evaluation task; the baseline and specification must implement the intended batch-aware evaluation.
+
+**Methodological background:** Separating development from final evaluation helps avoid data leakage and overly optimistic performance estimates ([Kapoor and Narayanan, 2023](https://doi.org/10.1016/j.patter.2023.100804)). The program-search method is informed by ERA ([Aygün et al., 2026](https://doi.org/10.1038/s41586-026-10658-6)).
 
 ### 6. Research updates and project handover
 
@@ -108,7 +118,7 @@ Incorporate new evidence, revise conclusions, and help another researcher or age
 
 Useful scientific work needs more than a good answer to one prompt. A proposed explanation needs supporting evidence. An analysis needs identifiable inputs and an appropriate comparison. A result needs interpretation, and the next research step should follow from what was actually learned.
 
-ResearchWeave grew from an effort to connect these activities in a practical, file-based workflow. Its starting point was a review of the public methods, prompts, and code from **Robin**, **Co-Scientist**, and **ERA**. The original work collected and attributed their public materials, translated selected responsibilities into usable research roles, and added a common way to save evidence, hypotheses, analysis plans, programs, results, and research updates.
+ResearchWeave grew from an effort to connect these activities in a practical, file-based workflow. Its starting point was a review of the public methods, prompts, and code from **Robin** ([Ghareeb et al., 2026](https://doi.org/10.1038/s41586-026-10652-y)), **Co-Scientist** ([Gottweis et al., 2026](https://doi.org/10.1038/s41586-026-10644-y)), and **ERA** ([Aygün et al., 2026](https://doi.org/10.1038/s41586-026-10658-6)). The original work collected and attributed their public materials, translated selected responsibilities into usable research roles, and added a common way to save evidence, hypotheses, analysis plans, programs, results, and research updates.
 
 The resulting project is designed for an agent you already use. It does not require launching a separate model service to coordinate the work. A single agent can take on different responsibilities in sequence; independent subtasks can use additional agents when the host supports them and the task warrants it.
 
@@ -116,10 +126,10 @@ The resulting project is designed for an agent you already use. It does not requ
 
 | Source | What informed ResearchWeave | What is included here |
 |---|---|---|
-| [Robin — FutureHouse](https://github.com/Future-House/robin) | Organizing literature research, experimental ideas, candidate comparisons, data interpretation, and follow-up work | Attributed public prompts, selected source files, and adapted role guidance |
-| [Co-Scientist — public paper and supplement](https://www.nature.com/articles/s41586-026-10644-y) | Generating hypotheses, reflecting on observations, comparing explanations, improving proposals, and synthesizing reviews | Public supplementary material, extracted templates, and adapted research methods |
-| [ERA — Google Research](https://github.com/google-research/era) | Improving candidate programs through execution feedback and search | The upstream FUTS search implementation, public prompt/task extracts, and a project-written stepwise interface |
-| [Finch — FutureHouse](https://github.com/Future-House/finch) | Additional publicly available data-analysis prompts associated with the broader source review | An attributed supplementary prompt collection |
+| [Robin — FutureHouse](https://github.com/Future-House/robin) · [Ghareeb et al., 2026](https://doi.org/10.1038/s41586-026-10652-y) | Organizing literature research, experimental ideas, candidate comparisons, data interpretation, and follow-up work | Attributed public prompts, selected source files, and adapted role guidance |
+| Co-Scientist · [Gottweis et al., 2026, and supplementary information](https://doi.org/10.1038/s41586-026-10644-y) | Generating hypotheses, reflecting on observations, comparing explanations, improving proposals, and synthesizing reviews | Public supplementary material, extracted templates, and adapted research methods |
+| [ERA — Google Research](https://github.com/google-research/era) · [Aygün et al., 2026](https://doi.org/10.1038/s41586-026-10658-6) | Improving candidate programs through execution feedback and search | The upstream FUTS search implementation, public prompt/task extracts, and a project-written stepwise interface |
+| [Finch — FutureHouse contributors, source snapshot](https://github.com/Future-House/finch/tree/aea66fdf2dd2be827727de50a73cae60dff59972) | Additional publicly available data-analysis prompts associated with the broader source review | An attributed supplementary prompt collection |
 
 ResearchWeave adds the **agent skill, common research-record format, input snapshots, command-line tools, Docker runner, installation workflow, and tests**. The source versions are recorded in [config/sources.json](config/sources.json), and detailed attribution is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
@@ -161,7 +171,7 @@ A model's preference for an explanation is a research judgment, not a measuremen
 
 ### 3. Plan the comparison before running it
 
-An analysis record describes the question, input files, method, comparison, success criteria, independent sample unit, and linked hypotheses. For example, repeated measurements from the same patient should not be counted as new independent patients.
+An analysis record describes the question, input files, method, comparison, success criteria, independent sample unit, and linked hypotheses. For example, repeated measurements from the same patient should not be counted as new independent patients. In single-cell differential-expression analysis, the importance of accounting for biological replicates is demonstrated by [Squair et al. (2021)](https://doi.org/10.1038/s41467-021-25960-2).
 
 The purpose is to connect each calculation to a question it can answer. A simple analysis should remain simple. Program search is useful only when there are meaningful alternative implementations and a defined way to evaluate them.
 
@@ -179,7 +189,7 @@ The `research report` command produces a structured summary of saved records. Th
 
 ## The optional ERA program-improvement cycle
 
-ERA is used when the task has a defined program interface, development data, and a suitable evaluation metric.
+ERA is used when the task has a defined program interface, development data, and a suitable evaluation metric. Its generate–execute–score approach is described by [Aygün et al. (2026)](https://doi.org/10.1038/s41586-026-10658-6); the [upstream Flat UCB Tree Search (FUTS) implementation](https://github.com/google-research/era/blob/b836730b5c000526af95116b1d0e2c60c8cf0a10/implementation/futs.py) supplies candidate selection in this project.
 
 ```text
 init       Save the problem, evaluation data, and baseline program; evaluate the baseline.
@@ -325,6 +335,23 @@ These checks test software behavior. They are not a benchmark of scientific disc
 Project-written integration code and documentation use [Apache-2.0](LICENSE), except where an adapted section explicitly retains another source license. Upstream source, extracted prompts, and paper material retain their original attribution and licenses, including CC BY 4.0 for the Co-Scientist material.
 
 Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [the source guide](references/sources.md), and the manifests under `agent-prompts/` for versions, extraction details, and the distinction between original text and adapted instructions.
+
+## References
+
+### Research-agent methods and source code
+
+- **Ghareeb, A. E., Chang, B., Mitchener, L., et al. (2026).** [A multi-agent system for automating scientific discovery](https://doi.org/10.1038/s41586-026-10652-y). *Nature*, **655**, 497–505. Robin source used here: [Future-House/robin, commit `4a5cce3`](https://github.com/Future-House/robin/tree/4a5cce310f3bc7663a67117db88af43b84733ffe).
+- **Gottweis, J., Weng, W.-H., Daryin, A., et al. (2026).** [Accelerating scientific discovery with Co-Scientist](https://doi.org/10.1038/s41586-026-10644-y). *Nature*, **655**, 487–496. Includes the public supplementary methods and prompts; the [supplementary PDF](agent-prompts/co-scientist/source/41586_2026_10644_MOESM1_ESM.pdf) and [extraction record](agent-prompts/co-scientist/manifest.json) are included in this repository.
+- **Aygün, E., Belyaeva, A., Comanici, G., et al. (2026).** [An AI system to help scientists write expert-level empirical software](https://doi.org/10.1038/s41586-026-10658-6). *Nature*, **654**, 909–916. ERA source used here: [google-research/era, commit `b836730`](https://github.com/google-research/era/tree/b836730b5c000526af95116b1d0e2c60c8cf0a10).
+- **FutureHouse contributors.** [Finch: an aviary-based data science agent based on Jupyter notebooks](https://github.com/Future-House/finch/tree/aea66fdf2dd2be827727de50a73cae60dff59972). Software source, commit `aea66fd`; source snapshot retrieved 15 September 2026. See the [local prompt manifest](agent-prompts/robin-components/manifest.json) for the exact files and extracted text used here.
+
+### Scientific and methodological background for the examples
+
+- **Billingsley, M. M., Singh, N., Ravikumar, P., Zhang, R., June, C. H., and Mitchell, M. J. (2020).** [Ionizable Lipid Nanoparticle-Mediated mRNA Delivery for Human CAR T Cell Engineering](https://doi.org/10.1021/acs.nanolett.9b04246). *Nano Letters*, **20**(3), 1578–1589.
+- **Squair, J. W., Gautier, M., Kathe, C., et al. (2021).** [Confronting false discoveries in single-cell differential expression](https://doi.org/10.1038/s41467-021-25960-2). *Nature Communications*, **12**, 5692.
+- **Hafner, M., Niepel, M., Chung, M., and Sorger, P. K. (2016).** [Growth rate inhibition metrics correct for confounders in measuring sensitivity to cancer drugs](https://doi.org/10.1038/nmeth.3853). *Nature Methods*, **13**, 521–527.
+- **Colic, M., Wang, G., Zimmermann, M., et al. (2019).** [Identifying chemogenetic interactions from CRISPR screens with drugZ](https://doi.org/10.1186/s13073-019-0665-3). *Genome Medicine*, **11**, 52.
+- **Kapoor, S., and Narayanan, A. (2023).** [Leakage and the reproducibility crisis in machine-learning-based science](https://doi.org/10.1016/j.patter.2023.100804). *Patterns*, **4**(9), 100804.
 
 ## Authors
 
