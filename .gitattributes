@@ -1,0 +1,2 @@
+# Preserve exact source bytes: the package and prompt manifests use SHA256.
+* -text
