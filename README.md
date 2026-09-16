@@ -1,4 +1,4 @@
-# ZhangLuo
+# ZhangLuo（张罗）
 
 **A research companion that keeps questions, evidence, code, and conclusions together.**
 
@@ -38,6 +38,46 @@ ZhangLuo adds the **agent skill, common research-record format, input snapshots,
 These components have different roles. The adapted Robin and Co-Scientist methods guide the host agent's work. ERA's FUTS is executable Python code that is used when a program-search session is started. The project does not reproduce Google's hosted Co-Scientist service or automatically connect the original Robin and ERA cloud services.
 
 The extracted English prompt bodies remain distinct from the project's adapted instructions. Several detailed role references are in Chinese; the project overview and installation guide are in English. An agent can use those references while responding in the user's requested language.
+
+## What can I use ZhangLuo for?
+
+You can use a single part of the workflow or carry a question from reading through analysis and follow-up. The examples below are prompts you can give your agent after installation. They illustrate intended uses, not completed studies or demonstrated scientific results. Supply the relevant papers, data, or project folder; literature retrieval and computation use the tools available to your host agent.
+
+### 1. Find out what the literature actually supports
+
+> Use ZhangLuo to assess whether a proposed delivery method produces functional expression in the intended cell type. Compare the primary studies, distinguish uptake from expression, and summarize which claims have direct evidence. Give me a source-linked evidence table and the most useful unanswered question.
+
+**What you get:** a focused literature comparison, an explanation of conflicting findings, and a conclusion tied to identifiable sources. This is useful when choosing a research direction or checking a claim before building on it.
+
+### 2. Explain an unexpected experimental result
+
+> My treatment changes a signaling marker, but the expected downstream response is absent. Use the attached measurements and experimental notes to compare plausible explanations. Separate observed facts from hypotheses and identify which missing control would best distinguish the alternatives.
+
+**What you get:** a short set of testable explanations, their predicted observations, and a practical next step. The agent can update the explanation when you provide the control results.
+
+### 3. Choose a small, informative next experiment
+
+> We have two competing explanations for this phenotype and resources for one follow-up experiment. Use ZhangLuo to compare them and propose the smallest useful experiment. State the controls, independent biological unit, readouts, and how each possible outcome would change the conclusion.
+
+**What you get:** an experiment plan connected to a specific decision, with reasons for each comparison. It helps a team decide what to do next without expanding the task into an entire research program.
+
+### 4. Analyze measurements and write an evidence-based report
+
+> Use ZhangLuo to analyze this CSV and its sample metadata. Check the sample structure, account for repeated measurements, choose a suitable comparison, and run the analysis in the available environment. Save the code and outputs, then write a report that separates measured results from interpretation.
+
+**What you get:** an analysis plan, recorded inputs and code, actual execution results, and a readable report. If essential metadata are missing, the agent identifies what is needed before making the affected comparison.
+
+### 5. Improve a small analysis program with ERA
+
+> Use ZhangLuo's ERA workflow to compare candidate implementations of this prediction function. Use the supplied baseline and development data, evaluate candidates with RMSE, and stop after the agreed iteration budget. Keep the final evaluation data aside until the best development candidate has been selected.
+
+**What you get:** an executed baseline, candidate scores and failures, saved search history, and one final evaluation of the selected program. This use requires the Docker runner and a task that fits its small Python-function interface.
+
+### 6. Continue a project across sessions or prepare a handover
+
+> Read this ZhangLuo study folder and its latest ResearchReport.md. Summarize the question, evidence, completed analyses, and unresolved items. Incorporate these new results, explain what they change, and prepare a handover that lets another researcher or agent continue the work.
+
+**What you get:** a project update based on saved records, linked evidence and results, and a specific next action. Existing records make it easier to continue work without relying on the previous chat's memory.
 
 ## How a research task runs
 
@@ -237,3 +277,7 @@ These checks test software behavior. They are not a benchmark of scientific disc
 Project-written integration code and documentation use [Apache-2.0](LICENSE), except where an adapted section explicitly retains another source license. Upstream source, extracted prompts, and paper material retain their original attribution and licenses, including CC BY 4.0 for the Co-Scientist material.
 
 Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [the source guide](references/sources.md), and the manifests under `agent-prompts/` for versions, extraction details, and the distinction between original text and adapted instructions.
+
+## Authors
+
+ZhangLuo is developed and maintained by **Zhang Lab, [Shenzhen University of Advanced Technology (SUAT)](https://www.suat-sz.edu.cn/en/index.htm), Shenzhen, China**.
