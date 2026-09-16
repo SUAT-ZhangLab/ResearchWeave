@@ -16,6 +16,70 @@ Give your agent this message:
 
 [Installation guide](INSTALL.md) · [Research skill](SKILL.md) · [Role guide](references/roles.md) · [Command reference](references/operations.md) · [Source collection](agent-prompts/README.md)
 
+## What can I use ResearchWeave for?
+
+The following are hypothetical project briefs, written to show how you might use ResearchWeave in day-to-day research. Sample counts, filenames, and preliminary observations are illustrative; they are not results from Zhang Lab or benchmarks of the system. Each example includes a concrete question, materials to provide, and a prompt you can adapt. Literature searches and analyses use the tools available to your host agent; specialized analyses need an appropriate analysis environment.
+
+### 1. Choose an mRNA delivery approach for primary T cells
+
+**Project:** A team wants to compare lipid nanoparticle formulations for delivering reporter mRNA to primary human T cells. Before starting, it needs to decide which published approaches are relevant to resting cells and which depend on prior activation.
+
+**Provide:** A folder of candidate papers and supplementary methods, plus `project_requirements.md` describing the intended cell state, reporter, available instruments, and practical constraints.
+
+> Use ResearchWeave to review these papers for mRNA delivery into primary human T cells. Make a table of cell source, activation state, delivery formulation, reporter expression, viability, observation time, and biological replicates. Separate particle uptake from functional protein expression. Identify which approaches best match our resting-cell project, explain the remaining uncertainties, and draft a first comparison with suitable controls and decision criteria. Link each reported value to its source.
+
+**Expected output:** A source-linked comparison table, a justified shortlist, and a focused experiment plan showing what observations would support selecting a formulation.
+
+### 2. Test whether a T-cell state is associated with treatment response
+
+**Project:** A hypothetical tumor single-cell study contains biopsies collected before and after treatment from 10 patients. The question is whether responders show a change in a cytotoxic T-cell expression program, a change in T-cell abundance, or both.
+
+**Provide:** `tumor_immune.h5ad`, `sample_metadata.csv` containing patient, time point, response, and batch, the quality-control notes, and the proposed gene set.
+
+> Use ResearchWeave to compare pretreatment and post-treatment T cells in this dataset. First check patient pairing, cell annotations, and batch structure. Analyze changes in cell abundance separately from changes in gene expression, using patients as the independent biological units. Assess the response-associated change with a suitable paired analysis, examine whether one patient drives the result, and distinguish association from a causal treatment mechanism. Run the analysis in the configured single-cell environment and save the code, figures, and report.
+
+**Expected output:** A documented sample assessment, patient-level comparisons, reproducible figures, and a report stating which interpretation the data support and which would need further evidence.
+
+### 3. Investigate why pathway inhibition does not reduce cell growth
+
+**Project:** In an illustrative lung cancer cell-line experiment, a candidate compound reduces phosphorylated ERK at an early time point, while the later viability assay changes little. The team needs to decide whether to investigate a transient effect, another growth-supporting pathway, or the assay itself.
+
+**Provide:** `western_blot_quantification.csv`, `viability_plate.csv`, the plate map, treatment and sampling notes, and relevant papers. Include the original images if the agent has suitable image-reading tools.
+
+> Use ResearchWeave to investigate the mismatch between the early p-ERK result and later viability measurements. Check normalization, replicate structure, controls, and the timing of both assays. Compare explanations that fit the observations and state what each predicts. Recommend the smallest follow-up that would distinguish the leading explanations, explain how each possible outcome would change our interpretation, and do not treat a proposed mechanism as an established result.
+
+**Expected output:** A joint assessment of both assays, a small set of competing explanations, and a follow-up plan tied to a clear decision.
+
+### 4. Decide which CRISPR-screen hit deserves follow-up
+
+**Project:** A cell-based CRISPR screen has nominated three genes that may affect sensitivity to an anticancer compound. The team can investigate one gene first and wants to separate a drug-specific effect from a general reduction in cell fitness.
+
+**Provide:** `guide_counts.tsv`, sample metadata for baseline, vehicle, and drug-treated cultures, a gene-level results table, and notes on screen quality and available cell models.
+
+> Use ResearchWeave to compare these three candidate genes. Review guide consistency, replicate agreement, baseline depletion, and the evidence for a drug-specific effect. Combine the screen results with relevant primary literature. Rank the candidates using explicit criteria, explain what could change the ranking, and design a focused follow-up using independent perturbations and an appropriate rescue or orthogonal test. Identify any additional data needed before selecting the lead.
+
+**Expected output:** A candidate comparison with linked evidence, a reasoned first choice if the evidence permits one, and a follow-up plan that can distinguish target-specific activity from general fitness effects.
+
+### 5. Improve a small model of enzyme activity with ERA
+
+**Project:** A protein-engineering team has measurements for a small enzyme-variant panel and wants to compare simple models that predict residual activity after a heat challenge. Variants measured in the same experimental batch must stay together when evaluating predictions.
+
+**Provide:** A compact JSON dataset containing variant descriptors, measured activity, and batch IDs; a baseline Python prediction function; and an evaluation specification with development splits and a separate final test batch.
+
+> Use ResearchWeave's ERA workflow to improve this prediction function. Preserve the supplied batch-aware development splits, fit preprocessing only on the training portion, and compare candidates with RMSE. Evaluate the baseline first and try at most eight candidate programs. Keep the final test batch out of development, then evaluate the selected candidate once. Record execution failures as well as scores, and explain whether any improvement is large enough to be useful for choosing variants to measure next.
+
+**Expected output:** Executed candidate programs, a comparison against the baseline, saved search history, and a final test result. This example requires the Docker runner and a compact function-evaluation task; the baseline and specification must implement the intended batch-aware evaluation.
+
+### 6. Update a project when follow-up experiments change the explanation
+
+**Project:** The lung cancer project in Example 3 has completed its follow-up. New measurements suggest that pathway inhibition is not sustained. Another researcher now needs to continue the project without reconstructing earlier decisions from chat messages.
+
+**Provide:** The saved study folder, its latest `ResearchReport.md`, a new time-course table, and the follow-up experiment notes.
+
+> Continue this ResearchWeave project using its saved records. Add the new time-course results and compare them with our earlier predictions. Explain which hypotheses gain or lose support and whether the current data justify another experiment. Update the report without replacing the earlier records. Prepare a handover that lists the files analyzed, conclusions supported so far, unresolved questions, and the next decision the team needs to make.
+
+**Expected output:** A report that explains what changed and why, new records linked to the previous analyses, and a handover another researcher or agent can use immediately.
+
 ## Why this project exists
 
 Useful scientific work needs more than a good answer to one prompt. A proposed explanation needs supporting evidence. An analysis needs identifiable inputs and an appropriate comparison. A result needs interpretation, and the next research step should follow from what was actually learned.
@@ -38,46 +102,6 @@ ResearchWeave adds the **agent skill, common research-record format, input snaps
 These components have different roles. The adapted Robin and Co-Scientist methods guide the host agent's work. ERA's FUTS is executable Python code that is used when a program-search session is started. The project does not reproduce Google's hosted Co-Scientist service or automatically connect the original Robin and ERA cloud services.
 
 The extracted English prompt bodies remain distinct from the project's adapted instructions. Several detailed role references are in Chinese; the project overview and installation guide are in English. An agent can use those references while responding in the user's requested language.
-
-## What can I use ResearchWeave for?
-
-You can use a single part of the workflow or carry a question from reading through analysis and follow-up. The examples below are prompts you can give your agent after installation. They illustrate intended uses, not completed studies or demonstrated scientific results. Supply the relevant papers, data, or project folder; literature retrieval and computation use the tools available to your host agent.
-
-### 1. Find out what the literature actually supports
-
-> Use ResearchWeave to assess whether a proposed delivery method produces functional expression in the intended cell type. Compare the primary studies, distinguish uptake from expression, and summarize which claims have direct evidence. Give me a source-linked evidence table and the most useful unanswered question.
-
-**What you get:** a focused literature comparison, an explanation of conflicting findings, and a conclusion tied to identifiable sources. This is useful when choosing a research direction or checking a claim before building on it.
-
-### 2. Explain an unexpected experimental result
-
-> My treatment changes a signaling marker, but the expected downstream response is absent. Use the attached measurements and experimental notes to compare plausible explanations. Separate observed facts from hypotheses and identify which missing control would best distinguish the alternatives.
-
-**What you get:** a short set of testable explanations, their predicted observations, and a practical next step. The agent can update the explanation when you provide the control results.
-
-### 3. Choose a small, informative next experiment
-
-> We have two competing explanations for this phenotype and resources for one follow-up experiment. Use ResearchWeave to compare them and propose the smallest useful experiment. State the controls, independent biological unit, readouts, and how each possible outcome would change the conclusion.
-
-**What you get:** an experiment plan connected to a specific decision, with reasons for each comparison. It helps a team decide what to do next without expanding the task into an entire research program.
-
-### 4. Analyze measurements and write an evidence-based report
-
-> Use ResearchWeave to analyze this CSV and its sample metadata. Check the sample structure, account for repeated measurements, choose a suitable comparison, and run the analysis in the available environment. Save the code and outputs, then write a report that separates measured results from interpretation.
-
-**What you get:** an analysis plan, recorded inputs and code, actual execution results, and a readable report. If essential metadata are missing, the agent identifies what is needed before making the affected comparison.
-
-### 5. Improve a small analysis program with ERA
-
-> Use ResearchWeave's ERA workflow to compare candidate implementations of this prediction function. Use the supplied baseline and development data, evaluate candidates with RMSE, and stop after the agreed iteration budget. Keep the final evaluation data aside until the best development candidate has been selected.
-
-**What you get:** an executed baseline, candidate scores and failures, saved search history, and one final evaluation of the selected program. This use requires the Docker runner and a task that fits its small Python-function interface.
-
-### 6. Continue a project across sessions or prepare a handover
-
-> Read this ResearchWeave study folder and its latest ResearchReport.md. Summarize the question, evidence, completed analyses, and unresolved items. Incorporate these new results, explain what they change, and prepare a handover that lets another researcher or agent continue the work.
-
-**What you get:** a project update based on saved records, linked evidence and results, and a specific next action. Existing records make it easier to continue work without relying on the previous chat's memory.
 
 ## How a research task runs
 
