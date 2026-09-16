@@ -1,5 +1,5 @@
 {
-  "name": "zhangluo",
+  "name": "researchweave",
   "version": "0.1.0",
   "files": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "8e8d766347f4d9e0f03edbaccfcdcd6a052630806aae678bc22935be555f3f33"
+      "sha256": "8f9cfaae4fa2487ff1698092cf10bc636dfc04e1fa3595716d07e60e6664f4af"
     },
     {
       "path": ".gitignore",
@@ -92,11 +92,11 @@
     },
     {
       "path": "agent-prompts/collection-manifest.json",
-      "sha256": "49e095dc33308fc883dda44518b4ed78ae6573dc614ff4e0be79b8f5bc99d316"
+      "sha256": "f5f8977f07bf1efce98b17eb376d68252cdd7ceb57b59c9019ba30adaedc4049"
     },
     {
       "path": "agent-prompts/era/extract.py",
-      "sha256": "7a67587a39d46b9140ebe358261ad2e44f4496c7196f1b736ada27f99db763ef"
+      "sha256": "b75ae7a9883a04ab7824d99f1145fcdcbb031bea145b7a5bc8a5d68f71fe0ebf"
     },
     {
       "path": "agent-prompts/era/manifest.json",
@@ -512,11 +512,11 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "6ed20e93a195fcd85707aa34c83c2de356420e36a37a4f5d3a38f194eb6e97e5"
+      "sha256": "5c48628f82422485d44ac438654df25e616b3612265a286ee5e806dcbf3a717e"
     },
     {
       "path": "CLAUDE.md",
-      "sha256": "170e49f89642fbb099224f153277f21fe5939accb75c2d6156ec7d88040bdc53"
+      "sha256": "7c79754afdec5e17f233799324575fce8e66758a03cc3215719091246c3add77"
     },
     {
       "path": "config/era.Dockerfile",
@@ -540,11 +540,11 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "df2c419f5821d74a28bf16e5eb647657eace758660dc285a02a4f287be934135"
+      "sha256": "0ec5ffd5bf10bdb071877c0dd41e9993d34818e070af8f96d118e9644d25bef6"
     },
     {
       "path": "install.py",
-      "sha256": "538d8d53535e29e975bdda47e52f766909182bd392041aa4d276df7e0a522123"
+      "sha256": "753af1b9ae4a128f94f03268901e4a63bf879fab63b54c0286d44a79eeb868e7"
     },
     {
       "path": "LICENSE",
@@ -552,19 +552,23 @@
     },
     {
       "path": "README.md",
-      "sha256": "21e9fc8f245d4eef4760fe8b2a8765e5168db210babd03d199f87d09b93e1bd3"
+      "sha256": "e7403e06bf78c92686b38d7722d7bab419e7849ab451ae8539bd11094c5b2714"
     },
     {
       "path": "references/operations.md",
-      "sha256": "15192e40ef17e9f9c28efb39b836aa054deae6eeebf4c0f20555e56e4279841b"
+      "sha256": "468daa9c1e68288df549b86d85a9132bd7e65b36c748d2ae3d4f4ad0d708217e"
     },
     {
       "path": "references/roles.md",
-      "sha256": "802216e3fc1175e7cf702ec1ea71a925df91e457a8ba47b6e3e589409a747870"
+      "sha256": "a95102f0789e1475c81ff27acd115c968fb1f5a539cebf865e8787a2da917424"
     },
     {
       "path": "references/sources.md",
       "sha256": "f725dff37a2650baaf6840cb9812328d220e33a12616eac0e26c8a052692d25f"
+    },
+    {
+      "path": "researchweave.py",
+      "sha256": "2893876c7b9228c2ad5d726d58143314e0c347b79e7f6476d7a728c8e73b8830"
     },
     {
       "path": "scripts/era.py",
@@ -572,31 +576,31 @@
     },
     {
       "path": "scripts/era_sandbox.py",
-      "sha256": "3c966fde4f0793c36330d034458748fad1b1116cde9de52be5d971cc87c1d656"
+      "sha256": "416fb7bf149ffdf3eacc20f4a3623f5107665c67e06c46f4d79d0313ef0e6f11"
     },
     {
       "path": "scripts/research.py",
-      "sha256": "575ec33d142078fe913862dbcaf1ea9212a2dfd9a68c953552692b93ad23eee0"
+      "sha256": "7a298ed46fb221adb9ec064322b6181646ed10316260326f45b5d6f3664063d1"
     },
     {
       "path": "scripts/test_era.py",
-      "sha256": "442f3137c2843718e722b96450f1d02da66e5b254511bc71a9f4cfa429e64ee3"
+      "sha256": "a1457cdd08cccd5b5b9edf08b1a9f620e04c32ea2f4884bbf2ecc3b3ce5c0cdd"
     },
     {
       "path": "scripts/test_install.py",
-      "sha256": "09defcb75131f179c7b9d497b7b576534174ee507fee3f010abcddcaf19d8f34"
+      "sha256": "90694d8c9fa77ee2568ffdf5e40e681b21176017d18abddf2ce9f53f0bd332b7"
     },
     {
       "path": "scripts/test_research.py",
-      "sha256": "33306e516247184aecdbdec2491d9d45cbfc70945990cc0a312464bd447c0715"
+      "sha256": "43bb9799b6247d1376f8b581eb01eab2624ec077f66e6d0cf96393e2273e2ab6"
     },
     {
       "path": "SKILL.md",
-      "sha256": "848945dc51dd55ec10f1649420bf0f3bb768e0587c951bc85f7007c1d0b28c35"
+      "sha256": "6f10df444dd612f75bb890ffd5e6e2aa72693ddb4bc31d091f32b0d7aa30bb6d"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "3e4379cde3b655a42a71b9f991b5dafdf9d695a9eb2399f15fcafbcb0a10609f"
+      "sha256": "0773234cc0a98db3d404e78e2fb25c30163b695621b5e7b705a44aeb833371b0"
     },
     {
       "path": "vendor/era/implementation/futs.py",
@@ -660,7 +664,7 @@
     },
     {
       "path": "zhangluo.py",
-      "sha256": "a8f33f0b0d5ff7a035b503ba1e402ab4787aafcf10cc5440bca36e912c56ee0e"
+      "sha256": "62491c1e8b3d7a85ee705bf3cb386c29b1756bd172d4fff92b2fa05f22840365"
     }
   ]
 }

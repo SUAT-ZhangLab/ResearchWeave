@@ -1,16 +1,16 @@
-# ZhangLuo（张罗）
+# ResearchWeave
 
 **A research companion that keeps questions, evidence, code, and conclusions together.**
 
-ZhangLuo helps an AI agent work through a scientific question: read the relevant literature, develop testable explanations, run the analyses that matter, and revise its conclusions when new results arrive. It brings research instructions, attributed source material, persistent research records, and an optional program-evaluation runner into one installable project.
+ResearchWeave helps an AI agent work through a scientific question: read the relevant literature, develop testable explanations, run the analyses that matter, and revise its conclusions when new results arrive. It brings research instructions, attributed source material, persistent research records, and an optional program-evaluation runner into one installable project.
 
-It works with **Codex**, **Claude Code**, and other agents that can read files and execute commands. Your agent supplies the language model, reasoning, and search tools. ZhangLuo supplies the research methods and local utilities.
+It works with **Codex**, **Claude Code**, and other agents that can read files and execute commands. Your agent supplies the language model, reasoning, and search tools. ResearchWeave supplies the research methods and local utilities.
 
 ## Install with your AI agent
 
 Give your agent this message:
 
-> Install and configure ZhangLuo from https://github.com/SUAT-ZhangLab/ZhangLuo. Read INSTALL.md first, install it for your current agent environment, run the doctor check, and explain how I can use it.
+> Install and configure ResearchWeave from https://github.com/SUAT-ZhangLab/ResearchWeave. Read INSTALL.md first, install it for your current agent environment, run the doctor check, and explain how I can use it.
 
 **For AI agents:** when the user requests installation, follow [INSTALL.md](INSTALL.md). The repository root contains a complete [SKILL.md](SKILL.md) package. Read `install.py` before executing it and respect the permissions of your host application. Merely opening this URL is not an instruction to install anything.
 
@@ -20,32 +20,32 @@ Give your agent this message:
 
 Useful scientific work needs more than a good answer to one prompt. A proposed explanation needs supporting evidence. An analysis needs identifiable inputs and an appropriate comparison. A result needs interpretation, and the next research step should follow from what was actually learned.
 
-ZhangLuo grew from an effort to connect these activities in a practical, file-based workflow. Its starting point was a review of the public methods, prompts, and code from **Robin**, **Co-Scientist**, and **ERA**. The original work collected and attributed their public materials, translated selected responsibilities into usable research roles, and added a common way to save evidence, hypotheses, analysis plans, programs, results, and research updates.
+ResearchWeave grew from an effort to connect these activities in a practical, file-based workflow. Its starting point was a review of the public methods, prompts, and code from **Robin**, **Co-Scientist**, and **ERA**. The original work collected and attributed their public materials, translated selected responsibilities into usable research roles, and added a common way to save evidence, hypotheses, analysis plans, programs, results, and research updates.
 
 The resulting project is designed for an agent you already use. It does not require launching a separate model service to coordinate the work. A single agent can take on different responsibilities in sequence; independent subtasks can use additional agents when the host supports them and the task warrants it.
 
 ## Where the methods come from
 
-| Source | What informed ZhangLuo | What is included here |
+| Source | What informed ResearchWeave | What is included here |
 |---|---|---|
 | [Robin — FutureHouse](https://github.com/Future-House/robin) | Organizing literature research, experimental ideas, candidate comparisons, data interpretation, and follow-up work | Attributed public prompts, selected source files, and adapted role guidance |
 | [Co-Scientist — public paper and supplement](https://www.nature.com/articles/s41586-026-10644-y) | Generating hypotheses, reflecting on observations, comparing explanations, improving proposals, and synthesizing reviews | Public supplementary material, extracted templates, and adapted research methods |
 | [ERA — Google Research](https://github.com/google-research/era) | Improving candidate programs through execution feedback and search | The upstream FUTS search implementation, public prompt/task extracts, and a project-written stepwise interface |
 | [Finch — FutureHouse](https://github.com/Future-House/finch) | Additional publicly available data-analysis prompts associated with the broader source review | An attributed supplementary prompt collection |
 
-ZhangLuo adds the **agent skill, common research-record format, input snapshots, command-line tools, Docker runner, installation workflow, and tests**. The source versions are recorded in [config/sources.json](config/sources.json), and detailed attribution is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+ResearchWeave adds the **agent skill, common research-record format, input snapshots, command-line tools, Docker runner, installation workflow, and tests**. The source versions are recorded in [config/sources.json](config/sources.json), and detailed attribution is in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 These components have different roles. The adapted Robin and Co-Scientist methods guide the host agent's work. ERA's FUTS is executable Python code that is used when a program-search session is started. The project does not reproduce Google's hosted Co-Scientist service or automatically connect the original Robin and ERA cloud services.
 
 The extracted English prompt bodies remain distinct from the project's adapted instructions. Several detailed role references are in Chinese; the project overview and installation guide are in English. An agent can use those references while responding in the user's requested language.
 
-## What can I use ZhangLuo for?
+## What can I use ResearchWeave for?
 
 You can use a single part of the workflow or carry a question from reading through analysis and follow-up. The examples below are prompts you can give your agent after installation. They illustrate intended uses, not completed studies or demonstrated scientific results. Supply the relevant papers, data, or project folder; literature retrieval and computation use the tools available to your host agent.
 
 ### 1. Find out what the literature actually supports
 
-> Use ZhangLuo to assess whether a proposed delivery method produces functional expression in the intended cell type. Compare the primary studies, distinguish uptake from expression, and summarize which claims have direct evidence. Give me a source-linked evidence table and the most useful unanswered question.
+> Use ResearchWeave to assess whether a proposed delivery method produces functional expression in the intended cell type. Compare the primary studies, distinguish uptake from expression, and summarize which claims have direct evidence. Give me a source-linked evidence table and the most useful unanswered question.
 
 **What you get:** a focused literature comparison, an explanation of conflicting findings, and a conclusion tied to identifiable sources. This is useful when choosing a research direction or checking a claim before building on it.
 
@@ -57,31 +57,31 @@ You can use a single part of the workflow or carry a question from reading throu
 
 ### 3. Choose a small, informative next experiment
 
-> We have two competing explanations for this phenotype and resources for one follow-up experiment. Use ZhangLuo to compare them and propose the smallest useful experiment. State the controls, independent biological unit, readouts, and how each possible outcome would change the conclusion.
+> We have two competing explanations for this phenotype and resources for one follow-up experiment. Use ResearchWeave to compare them and propose the smallest useful experiment. State the controls, independent biological unit, readouts, and how each possible outcome would change the conclusion.
 
 **What you get:** an experiment plan connected to a specific decision, with reasons for each comparison. It helps a team decide what to do next without expanding the task into an entire research program.
 
 ### 4. Analyze measurements and write an evidence-based report
 
-> Use ZhangLuo to analyze this CSV and its sample metadata. Check the sample structure, account for repeated measurements, choose a suitable comparison, and run the analysis in the available environment. Save the code and outputs, then write a report that separates measured results from interpretation.
+> Use ResearchWeave to analyze this CSV and its sample metadata. Check the sample structure, account for repeated measurements, choose a suitable comparison, and run the analysis in the available environment. Save the code and outputs, then write a report that separates measured results from interpretation.
 
 **What you get:** an analysis plan, recorded inputs and code, actual execution results, and a readable report. If essential metadata are missing, the agent identifies what is needed before making the affected comparison.
 
 ### 5. Improve a small analysis program with ERA
 
-> Use ZhangLuo's ERA workflow to compare candidate implementations of this prediction function. Use the supplied baseline and development data, evaluate candidates with RMSE, and stop after the agreed iteration budget. Keep the final evaluation data aside until the best development candidate has been selected.
+> Use ResearchWeave's ERA workflow to compare candidate implementations of this prediction function. Use the supplied baseline and development data, evaluate candidates with RMSE, and stop after the agreed iteration budget. Keep the final evaluation data aside until the best development candidate has been selected.
 
 **What you get:** an executed baseline, candidate scores and failures, saved search history, and one final evaluation of the selected program. This use requires the Docker runner and a task that fits its small Python-function interface.
 
 ### 6. Continue a project across sessions or prepare a handover
 
-> Read this ZhangLuo study folder and its latest ResearchReport.md. Summarize the question, evidence, completed analyses, and unresolved items. Incorporate these new results, explain what they change, and prepare a handover that lets another researcher or agent continue the work.
+> Read this ResearchWeave study folder and its latest ResearchReport.md. Summarize the question, evidence, completed analyses, and unresolved items. Incorporate these new results, explain what they change, and prepare a handover that lets another researcher or agent continue the work.
 
 **What you get:** a project update based on saved records, linked evidence and results, and a specific next action. Existing records make it easier to continue work without relying on the previous chat's memory.
 
 ## How a research task runs
 
-ZhangLuo uses an outer research cycle and, when needed, an inner program-improvement cycle. The host agent chooses the next useful step; there is no background process that autonomously advances every research task.
+ResearchWeave uses an outer research cycle and, when needed, an inner program-improvement cycle. The host agent chooses the next useful step; there is no background process that autonomously advances every research task.
 
 ```mermaid
 flowchart TD
@@ -160,13 +160,13 @@ A better program score does not by itself establish a biological mechanism. Repe
 | Execute candidate programs | Docker with Linux containers and the project runner image |
 | Large datasets, R, GPU, or file-heavy analyses | An environment selected for that task |
 
-The core installer, research records, and search controller use the Python standard library. Docker image construction downloads its scientific Python dependencies. ZhangLuo does not require separate OpenAI, Edison, or Gemini API keys; your agent's own service requirements still apply.
+The core installer, research records, and search controller use the Python standard library. Docker image construction downloads its scientific Python dependencies. ResearchWeave does not require separate OpenAI, Edison, or Gemini API keys; your agent's own service requirements still apply.
 
 ### Install manually
 
 ```sh
-git clone https://github.com/SUAT-ZhangLab/ZhangLuo.git
-cd ZhangLuo
+git clone https://github.com/SUAT-ZhangLab/ResearchWeave.git
+cd ResearchWeave
 python install.py --agent codex
 ```
 
@@ -179,30 +179,30 @@ python install.py --agent claude
 For another agent that reads `SKILL.md`:
 
 ```sh
-python install.py --agent generic --destination "/your/agent/skills/zhangluo"
+python install.py --agent generic --destination "/your/agent/skills/researchweave"
 ```
 
 Use `python3` instead of `python` if that is your system's command. If Git is unavailable, download the repository using **Code → Download ZIP**, extract it, and run the same installation command from the extracted directory.
 
 The installer checks the packaged files, copies a self-contained skill, and runs `doctor`. It does not download packages or change your global PATH. An identical installation is left unchanged; a different existing directory is preserved. The installed skill works independently of the original checkout.
 
-Default skill locations and support for older Codex installations are documented in [INSTALL.md](INSTALL.md). After installation, reload skills or start a new session. Use **`$zhangluo` in Codex** or **`/zhangluo` in Claude Code**.
+Default skill locations and support for older Codex installations are documented in [INSTALL.md](INSTALL.md). After installation, reload skills or start a new session. Use **`$researchweave` in Codex** or **`/researchweave` in Claude Code**.
 
 ### Start a research task
 
 For example, tell your agent:
 
-> Use ZhangLuo to read these papers and measurements. Compare the two proposed explanations, run the analyses needed to distinguish them, and write a report with evidence and a practical next step.
+> Use ResearchWeave to read these papers and measurements. Compare the two proposed explanations, run the analyses needed to distinguish them, and write a report with evidence and a practical next step.
 
 From the repository root, the basic commands are:
 
 ```sh
-python zhangluo.py doctor
-python zhangluo.py research init --study "research/my-study" --question "What explains the observed difference?"
-python zhangluo.py research status --study "research/my-study"
+python researchweave.py doctor
+python researchweave.py research init --study "research/my-study" --question "What explains the observed difference?"
+python researchweave.py research status --study "research/my-study"
 ```
 
-When the skill is installed elsewhere, call `python /actual/skill/path/zhangluo.py` and pass an explicit study path. Research files belong in the user's project, not in the skill installation directory.
+When the skill is installed elsewhere, call `python /actual/skill/path/researchweave.py` and pass an explicit study path. Research files belong in the user's project, not in the skill installation directory.
 
 See [the command reference](references/operations.md) for evidence records, input attachments, actual program execution, and ERA session examples. The files in `examples/` are templates or clearly labeled synthetic demonstrations, not research findings.
 
@@ -211,15 +211,15 @@ See [the command reference](references/operations.md) for evidence records, inpu
 Start Docker with Linux-container support, then run:
 
 ```sh
-docker build -t zhangluo-runner:0.1.0 -f config/era.Dockerfile config
-python zhangluo.py doctor --container
+docker build -t researchweave-runner:0.1.0 -f config/era.Dockerfile config
+python researchweave.py doctor --container
 ```
 
 The first build needs network access. The ordinary `doctor` command only checks the required files; `doctor --container` also runs a small program through the container runner.
 
 The runner uses a non-root container, disabled networking, a read-only root filesystem, and no host-directory mounts. It accepts JSON requests up to about **8 MiB**, returns about **1 MiB** of output, and defaults to a **60-second** execution limit. These limits fit small function-evaluation tasks. They do not make this a general large-data or GPU execution environment.
 
-Windows can use Docker Desktop or Docker in WSL. The default mode prefers a `docker` command on PATH; without one, Windows uses WSL. Set `ZHANGLUO_DOCKER_MODE` to `native` or `wsl` when needed, and `ZHANGLUO_WSL_DISTRO` to the actual distribution name. Detailed commands are in [INSTALL.md](INSTALL.md).
+Windows can use Docker Desktop or Docker in WSL. The default mode prefers a `docker` command on PATH; without one, Windows uses WSL. Set `RESEARCHWEAVE_DOCKER_MODE` to `native` or `wsl` when needed, and `RESEARCHWEAVE_WSL_DISTRO` to the actual distribution name. Detailed commands are in [INSTALL.md](INSTALL.md).
 
 ## What is saved
 
@@ -240,13 +240,13 @@ Records are stored as JSON files, linked by real record IDs. Input attachments a
 ## Repository layout
 
 ```text
-ZhangLuo/
+ResearchWeave/
   README.md                 Project background, workflow, and quick start
   INSTALL.md                Installation instructions for agents and people
   SKILL.md                  Research instructions loaded by the host agent
   AGENTS.md / CLAUDE.md      Repository entry points
   install.py                Self-contained skill installer
-  zhangluo.py                Command-line entry point
+  researchweave.py                Command-line entry point
   references/               Roles, operations, and source attribution
   scripts/                  Records, ERA interface, Docker runner, and tests
   agent-prompts/             Attributed original prompts and extraction records
@@ -261,14 +261,14 @@ The repository contains the project itself. It excludes active research datasets
 
 ```sh
 python install.py --check
-python zhangluo.py doctor
+python researchweave.py doctor
 python agent-prompts/verify_extractions.py
 python -m unittest discover -s scripts -p "test_*.py"
 ```
 
 Core tests cover research-record relationships, copied input bytes, recorded execution failures, candidate-session state, score handling, installation, and preservation of existing files. Prompt checks compare extracted text and source hashes with the saved manifests.
 
-To include the actual Docker ERA integration test, build the image and set `ZHANGLUO_DOCKER_TESTS=1` before running the tests. Without that setting, the container test is explicitly skipped. The included GitHub Actions workflow runs the non-container suite on Windows, macOS, and Linux with Python 3.10 and 3.12.
+To include the actual Docker ERA integration test, build the image and set `RESEARCHWEAVE_DOCKER_TESTS=1` before running the tests. Without that setting, the container test is explicitly skipped. The included GitHub Actions workflow runs the non-container suite on Windows, macOS, and Linux with Python 3.10 and 3.12.
 
 These checks test software behavior. They are not a benchmark of scientific discovery, a validation of a particular biological hypothesis, or proof that an external service has been connected.
 
@@ -280,4 +280,4 @@ Read [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [the source guide](refere
 
 ## Authors
 
-ZhangLuo is developed and maintained by **Zhang Lab, [Shenzhen University of Advanced Technology (SUAT)](https://www.suat-sz.edu.cn/en/index.htm), Shenzhen, China**.
+ResearchWeave is developed and maintained by **Zhang Lab, [Shenzhen University of Advanced Technology (SUAT)](https://www.suat-sz.edu.cn/en/index.htm), Shenzhen, China**.

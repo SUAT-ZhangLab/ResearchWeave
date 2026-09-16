@@ -1,4 +1,4 @@
-"""Install a self-contained ZhangLuo skill. Standard library only; no downloads."""
+"""Install a self-contained ResearchWeave skill. Standard library only; no downloads."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -13,11 +13,11 @@ ROOT = Path(__file__).resolve().parent
 
 def default_destination(agent):
     if agent == 'codex':
-        return Path.home() / '.agents' / 'skills' / 'zhangluo'
+        return Path.home() / '.agents' / 'skills' / 'researchweave'
     if agent == 'codex-legacy':
-        return Path(os.environ.get('CODEX_HOME', str(Path.home()/'.codex'))) / 'skills' / 'zhangluo'
+        return Path(os.environ.get('CODEX_HOME', str(Path.home()/'.codex'))) / 'skills' / 'researchweave'
     if agent == 'claude':
-        return Path.home() / '.claude' / 'skills' / 'zhangluo'
+        return Path.home() / '.claude' / 'skills' / 'researchweave'
     raise ValueError('For other agents, provide --destination with the full skill directory.')
 
 def package_files():
@@ -50,11 +50,11 @@ def install(destination):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(ROOT/name,target)
         status = 'installed'
-    check=subprocess.run([sys.executable,'-X','utf8',str(dest/'zhangluo.py'),'doctor'],capture_output=True,text=True,encoding='utf-8')
+    check=subprocess.run([sys.executable,'-X','utf8',str(dest/'researchweave.py'),'doctor'],capture_output=True,text=True,encoding='utf-8')
     if check.returncode:
         raise ValueError('Installed files did not pass doctor: '+check.stderr)
     return {'status':status,'destination':str(dest),'version':(ROOT/'VERSION').read_text().strip(),
-            'doctor':json.loads(check.stdout),'next_step':'Reload skills or start a new agent session; then use zhangluo.'}
+            'doctor':json.loads(check.stdout),'next_step':'Reload skills or start a new agent session; then use researchweave.'}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)

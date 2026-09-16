@@ -1,16 +1,16 @@
 ---
-name: zhangluo
-description: Organize scientific research from literature and data to testable hypotheses, executed analyses, and evidence-based updates. Use when the user asks for ZhangLuo, compares scientific explanations, analyzes research data, or continues a saved research project.
+name: researchweave
+description: Organize scientific research from literature and data to testable hypotheses, executed analyses, and evidence-based updates. Use when the user asks for ResearchWeave, compares scientific explanations, analyzes research data, or continues a saved research project.
 ---
 
-# ZhangLuo
+# ResearchWeave
 
 帮助用户把科研问题、证据、假设、分析和结论组织起来。当前 agent 提供推理与检索；本目录提供方法、研究记录程序和可选容器执行器。
 
 ## 开始
 
 先读取用户目标和已有文件。文献或方案任务可以直接使用角色方法；需要研究记录时运行
-`python <本技能目录>/zhangluo.py doctor`。所有程序路径以本 SKILL.md 所在目录为起点，不能假定当前工作目录就是技能目录。
+`python <本技能目录>/researchweave.py doctor`。所有程序路径以本 SKILL.md 所在目录为起点，不能假定当前工作目录就是技能目录。
 
 新研究用 `research init --study <研究目录> --question <问题>`；已有研究先用 `research status --study <研究目录>`。
 用户未指定位置时，在当前用户项目下建立 `research/<日期-名称>/`，并告诉用户。不要把研究数据写入技能安装目录。

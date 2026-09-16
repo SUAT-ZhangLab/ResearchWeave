@@ -1,6 +1,6 @@
 # Third-party sources
 
-ZhangLuo's original integration code and documentation are licensed under Apache-2.0; see LICENSE.
+ResearchWeave's original integration code and documentation are licensed under Apache-2.0; see LICENSE.
 This license does not replace the original terms of the following materials.
 
 - **Robin**, FutureHouse contributors: Apache-2.0. Source snapshot `4a5cce310f3bc7663a67117db88af43b84733ffe`.
